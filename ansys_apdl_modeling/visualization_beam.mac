@@ -1,0 +1,51 @@
+/FILNAME, beam_modal, 1
+/PREP7
+
+! Material
+MP,EX,1,2e11
+MP,PRXY,1,0.3
+MP,DENS,1,7850
+
+! Element
+ET,1,SOLID185
+
+! Geometry
+BLC4, 0, 0, 0.2, 0.05, 0.05
+
+! Mesh
+ESIZE,0.025
+VMESH,ALL
+
+FINISH
+
+/SOLU
+ANTYPE,2
+MODOPT,LANB,1
+MXPAND,1
+
+NSEL,S,LOC,X,0
+D,ALL,ALL
+ALLSEL
+
+SOLVE
+FINISH
+
+/POST1
+FILE, beam_modal0      ! Load result file (default result name)
+SET, 1, 1                ! Now this works!
+/ESHAPE,1          ! Turn on element shape display
+/VIEW,1,1,1,1      ! Isometric view
+/PLOPTS,INFO,3     ! Show deformed + undeformed
+
+/ANIM,DEFL         ! Animate deformation
+
+*GET,FREQ,MODE,1,FREQ
+/OUTPUT,freqout,txt
+*VWRITE,FREQ
+('Mode 1 frequency: ', E12.5)
+*CFOPEN,freq_raw,txt
+*VWRITE,FREQ
+(E12.5)
+*CFCLOS
+/OUTPUT
+FINISH

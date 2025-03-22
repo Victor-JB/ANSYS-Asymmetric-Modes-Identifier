@@ -1,0 +1,153 @@
+
+ *****  MAPDL SOLUTION ROUTINE  *****
+
+
+  *** MASS SUMMARY BY ELEMENT TYPE ***
+
+  TYPE      MASS
+     1   102.231    
+ AN AVERAGE OF THE X-, Y-, AND Z-DIRECTION MASS TERMS ARE USED
+
+  BLOCK LANCZOS CALCULATION OF UP TO     1 EIGENVECTORS.
+  NUMBER OF EQUATIONS              =        14604
+  MAXIMUM WAVEFRONT                =           51
+  MAXIMUM MODES STORED             =            1
+  MINIMUM EIGENVALUE               =  0.00000E+00
+  MAXIMUM EIGENVALUE               =  0.10000E+31
+
+
+
+  Memory allocated on only this MPI rank (rank     2)
+  -------------------------------------------------------------------
+  Equation solver memory allocated                     =     9.674 MB
+  Equation solver memory required for in-core mode     =     9.231 MB
+  Equation solver memory required for out-of-core mode =     4.244 MB
+  Total (solver and non-solver) memory allocated       =   306.310 MB
+
+ *** NOTE ***                            CP =       9.500   TIME= 02:43:24
+ The Distributed Sparse Matrix Solver used by the Block Lanczos          
+ eigensolver is currently running in the in-core memory mode.  This      
+ memory mode uses the most amount of memory in order to avoid using the  
+ hard drive as much as possible, which most often results in the         
+ fastest solution time.  This mode is recommended if enough physical     
+ memory is present to accommodate all of the solver data.                
+
+  Process memory required for in-core LANCZOS Workspace             =     12.026154 MB
+  Process memory required for out-of-core LANCZOS Workspace         =     668.781250 KB
+
+  Total   memory required for in-core LANCZOS Workspace             =     45.312988 MB
+  Total   memory required for out-of-core LANCZOS Workspace         =     2.527832 MB
+
+  Lanczos Memory Mode : INCORE
+
+ *** MAPDL - ENGINEERING ANALYSIS SYSTEM  RELEASE 2025 R1          25.1     ***
+ Ansys Mechanical Enterprise                       
+ 00000000  VERSION=WINDOWS x64   02:43:25  MAR 22, 2025 CP=      9.750
+
+                                                                               
+
+
+
+ *** FREQUENCIES FROM BLOCK LANCZOS ITERATION ***
+
+  MODE    FREQUENCY (HERTZ)      
+
+
+    1     37.07268365399    
+
+ *** MAPDL - ENGINEERING ANALYSIS SYSTEM  RELEASE 2025 R1          25.1     ***
+ Ansys Mechanical Enterprise                       
+ 00000000  VERSION=WINDOWS x64   02:43:25  MAR 22, 2025 CP=      9.750
+
+                                                                               
+
+
+
+
+
+          ***** PARTICIPATION FACTOR CALCULATION *****  X  DIRECTION
+                                                                                  CUMULATIVE     RATIO EFF.MASS
+  MODE   FREQUENCY       PERIOD      PARTIC.FACTOR     RATIO    EFFECTIVE MASS   MASS FRACTION   TO TOTAL MASS
+     1     37.0727       0.26974E-01    0.0000        0.000000     0.00000         0.00000         0.00000    
+
+
+
+          ***** PARTICIPATION FACTOR CALCULATION *****  Y  DIRECTION
+                                                                                  CUMULATIVE     RATIO EFF.MASS
+  MODE   FREQUENCY       PERIOD      PARTIC.FACTOR     RATIO    EFFECTIVE MASS   MASS FRACTION   TO TOTAL MASS
+     1     37.0727       0.26974E-01    3.3571        1.000000     11.2699         1.00000        0.363457E-01
+ -----------------------------------------------------------------------------------------------------------------
+   sum                                                             11.2699                        0.363457E-01
+ -----------------------------------------------------------------------------------------------------------------
+
+
+
+          ***** PARTICIPATION FACTOR CALCULATION *****  Z  DIRECTION
+                                                                                  CUMULATIVE     RATIO EFF.MASS
+  MODE   FREQUENCY       PERIOD      PARTIC.FACTOR     RATIO    EFFECTIVE MASS   MASS FRACTION   TO TOTAL MASS
+     1     37.0727       0.26974E-01  -0.86685        1.000000    0.751434         1.00000        0.242339E-02
+ -----------------------------------------------------------------------------------------------------------------
+   sum                                                            0.751434                        0.242339E-02
+ -----------------------------------------------------------------------------------------------------------------
+
+
+
+          ***** PARTICIPATION FACTOR CALCULATION *****ROTX DIRECTION
+                                                                                  CUMULATIVE     RATIO EFF.MASS
+  MODE   FREQUENCY       PERIOD      PARTIC.FACTOR     RATIO    EFFECTIVE MASS   MASS FRACTION   TO TOTAL MASS
+     1     37.0727       0.26974E-01  -0.10560        1.000000    0.111509E-01     1.00000        0.658148E-02
+ -----------------------------------------------------------------------------------------------------------------
+   sum                                                            0.111509E-01                    0.658148E-02
+ -----------------------------------------------------------------------------------------------------------------
+
+
+
+          ***** PARTICIPATION FACTOR CALCULATION *****ROTY DIRECTION
+                                                                                  CUMULATIVE     RATIO EFF.MASS
+  MODE   FREQUENCY       PERIOD      PARTIC.FACTOR     RATIO    EFFECTIVE MASS   MASS FRACTION   TO TOTAL MASS
+     1     37.0727       0.26974E-01   0.63015        1.000000    0.397095         1.00000        0.427437E-02
+ -----------------------------------------------------------------------------------------------------------------
+   sum                                                            0.397095                        0.427437E-02
+ -----------------------------------------------------------------------------------------------------------------
+
+
+
+          ***** PARTICIPATION FACTOR CALCULATION *****ROTZ DIRECTION
+                                                                                  CUMULATIVE     RATIO EFF.MASS
+  MODE   FREQUENCY       PERIOD      PARTIC.FACTOR     RATIO    EFFECTIVE MASS   MASS FRACTION   TO TOTAL MASS
+     1     37.0727       0.26974E-01    2.4404        1.000000     5.95558         1.00000        0.641064E-01
+ -----------------------------------------------------------------------------------------------------------------
+   sum                                                             5.95558                        0.641064E-01
+ -----------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+ *** NOTE ***                            CP =       9.750   TIME= 02:43:25
+ The modes requested are mass normalized (Nrmkey on MODOPT).  However,   
+ the modal masses and kinetic energies below are calculated with unit    
+ normalized modes.                                                       
+
+        ***** MODAL MASSES, KINETIC ENERGIES, AND TRANSLATIONAL EFFECTIVE MASSES SUMMARY *****
+
+                                                                         EFFECTIVE MASS
+  MODE  FREQUENCY   MODAL MASS     KENE      |      X-DIR      RATIO%   Y-DIR      RATIO%   Z-DIR      RATIO% 
+     1   37.07       5.235      0.1420E+06   |     0.000        0.00   11.27        3.63  0.7514        0.24
+ --------------------------------------------------------------------------------------------------------------
+   sum                                       |     0.000        0.00   11.27        3.63  0.7514        0.24
+ --------------------------------------------------------------------------------------------------------------
+
+
+ *** MAPDL BINARY FILE STATISTICS
+  BUFFER SIZE USED= 16384
+        1.812 MB WRITTEN ON ASSEMBLED MATRIX FILE: beam_modal2.full
+        0.062 MB WRITTEN ON MODAL MATRIX FILE: beam_modal2.mode
+        0.500 MB WRITTEN ON RESULTS FILE: beam_modal2.rst
+
+ FINISH SOLUTION PROCESSING
+
+
+ ***** ROUTINE COMPLETED *****  CP =         9.891
+
+
