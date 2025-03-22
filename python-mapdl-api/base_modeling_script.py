@@ -9,6 +9,8 @@ import os
 # mapdl = launch_mapdl(run_location="beam_run", loglevel="ERROR")
 mapdl = launch_mapdl(run_location="beam_run")
 
+print(mapdl) # info on the instance, version, license, etc.
+ 
 # Start MAPDL
 mapdl.clear()
 mapdl.prep7()
