@@ -1,10 +1,12 @@
 from ansys.mapdl.core import launch_mapdl
 import numpy as np
+import os
 
-# 1. Launch MAPDL
-mapdl = launch_mapdl(exec_path="path_to_ansys_executable",  # or omit if on PATH
-                     mode='console',                        # runs in console mode
-                     loglevel='WARNING')                    # hide detail logs
+# having to set environment variable for MAPDL executable path because 'exec_path' arg doesn't exist anymore
+os.environ["MAPDL_EXEC"] = r"C:\Program Files\ANSYS Inc\ANSYS Student\v251\ansys\bin\winx64\ANSYS251.exe"
+
+mapdl = launch_mapdl(run_location="beam_run", loglevel="ERROR")
+      # hide detail logs
 
 ###############################################################################
 # 2. Preprocessing

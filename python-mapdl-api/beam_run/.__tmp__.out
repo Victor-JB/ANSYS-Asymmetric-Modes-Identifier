@@ -1,30 +1,5 @@
  Beta activation of the GRPC server.
 
- ANSYS LICENSE MANAGER ERROR:
- Maximum licensed number of demo users already reached.
-
-
- ANSYS LICENSE MANAGER ERROR:
- No such feature exists.
- Feature:       mech_2
- License path:  C:\Users\Student\AppData\Local\Temp\\2cd73a76-ed77-41a5-ac6f-a3aefeae5029;
- FlexNet Licensing error:-5,357
-
-
- ANSYS LICENSE MANAGER ERROR:
- No such feature exists.
- Feature:       mech_1
- License path:  C:\Users\Student\AppData\Local\Temp\\2cd73a76-ed77-41a5-ac6f-a3aefeae5029;
- FlexNet Licensing error:-5,357
-
-
- ANSYS LICENSE MANAGER ERROR:
- No such feature exists.
- Feature:       meba
- License path:  C:\Users\Student\AppData\Local\Temp\\2cd73a76-ed77-41a5-ac6f-a3aefeae5029;
- FlexNet Licensing error:-5,357
-
-
  Ansys Mechanical Enterprise Academic Student      
 
 
@@ -141,7 +116,7 @@
  PORT                              50052.0000                    SCALAR
 
  RELEASE= 2025 R1              BUILD= 25.1      UP20241202   VERSION=WINDOWS x64 
- CURRENT JOBNAME=file  15:55:34  MAR 22, 2025 CP=      0.188
+ CURRENT JOBNAME=file  16:30:58  MAR 22, 2025 CP=      0.109
 
      1  FINISH 
 
@@ -239,32 +214,36 @@
 
  /OUTPUT FILE=         
 
- ANSYS LICENSE MANAGER ERROR:
- No FlexNet Publisher (FNP) license found for feature Ansys Mechanical Enterprise Solver.
-             FNP license path: C:\Users\Student\AppData\Local\Temp\\2cd73a76-ed77-41a5-ac6f-a3aefeae5029
- No such feature exists.
- Feature:       meba
- License path:  C:\Users\Student\AppData\Local\Temp\\2cd73a76-ed77-41a5-ac6f-a3aefeae5029;
- FlexNet Licensing error:-5,357
+ /OUTPUT FILE=         
 
+ /OUTPUT FILE=         
 
+ /OUTPUT FILE=         
 
- *-----------------------------------------------------------------------------*
- |                                                                             |
- |                               RUN COMPLETED                                 |
- |                                                                             |
- |-----------------------------------------------------------------------------|
- |                                                                             |
- |  Ansys MAPDL 2025 R1         Build 25.1         UP20241202    WINDOWS x64   |
- |                                                                             |
- |-----------------------------------------------------------------------------|
- |                                                                             |
- |  Database Requested(-db)  1024 MB     Scratch Memory Requested      1024 MB |
- |  Maximum Database Used       1 MB     Maximum Scratch Memory Used      8 MB |
- |                                                                             |
- |-----------------------------------------------------------------------------|
- |                                                                             |
- |        CP Time      (sec) =          1.094       Time  =  15:55:36          |
- |        Elapsed Time (sec) =          7.000       Date  =  03/22/2025        |
- |                                                                             |
- *-----------------------------------------------------------------------------*
+ /OUTPUT FILE=         
+ You have already entered the general postprocessor (POST1).             
+
+ /OUTPUT FILE=         
+ You have already entered the general postprocessor (POST1).             
+
+ /OUTPUT FILE=         
+
+ /OUTPUT FILE=         
+
+ /OUTPUT FILE=         
+ You have already entered the general postprocessor (POST1).             
+
+ /OUTPUT FILE=         
+ You have already entered the general postprocessor (POST1).             
+
+ /OUTPUT FILE=         
+
+ /OUTPUT FILE=         
+
+ /OUTPUT FILE=         
+ You have already entered the general postprocessor (POST1).             
+
+ /OUTPUT FILE=         
+ You have already entered the general postprocessor (POST1).             
+
+ /OUTPUT FILE=         
