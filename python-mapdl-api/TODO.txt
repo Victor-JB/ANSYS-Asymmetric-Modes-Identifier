@@ -1,0 +1,5 @@
+Figure out how to get python running pymapdl and the analysis
+View an example of the sim in ParaVisualizer sim
+BE ABLE TO PARAMETERIZE THE STUFF--super important for repeated sim
+FIGURE OUT HOW TO ANALYZE FORCE GENERATED of a thing--HARMONIC ANALYSIS?
+FIGURE OUT HOW TO MAKE IT IN DATASET FOR ML--HOW TO ACTUALLY TRAIN A THING, the inputs and outputs

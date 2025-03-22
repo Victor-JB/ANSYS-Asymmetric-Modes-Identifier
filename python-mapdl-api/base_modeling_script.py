@@ -2,8 +2,12 @@ from ansys.mapdl.core import launch_mapdl
 import numpy as np
 import os
 
-# Start MAPDL
+# having to set environment variable for MAPDL executable path because 'exec_path' arg doesn't exist anymore
+os.environ["MAPDL_EXEC"] = r"C:\Program Files\ANSYS Inc\ANSYS Student\v251\ansys\bin\winx64\ANSYS251.exe"
+
 mapdl = launch_mapdl(run_location="beam_run", loglevel="ERROR")
+
+# Start MAPDL
 mapdl.clear()
 mapdl.prep7()
 

@@ -7,21 +7,21 @@
  ANSYS LICENSE MANAGER ERROR:
  No such feature exists.
  Feature:       mech_2
- License path:  C:\Users\Student\AppData\Local\Temp\\c03e44d2-29c0-4988-8d7e-9d66a8da6523;
+ License path:  C:\Users\Student\AppData\Local\Temp\\2cd73a76-ed77-41a5-ac6f-a3aefeae5029;
  FlexNet Licensing error:-5,357
 
 
  ANSYS LICENSE MANAGER ERROR:
  No such feature exists.
  Feature:       mech_1
- License path:  C:\Users\Student\AppData\Local\Temp\\c03e44d2-29c0-4988-8d7e-9d66a8da6523;
+ License path:  C:\Users\Student\AppData\Local\Temp\\2cd73a76-ed77-41a5-ac6f-a3aefeae5029;
  FlexNet Licensing error:-5,357
 
 
  ANSYS LICENSE MANAGER ERROR:
  No such feature exists.
  Feature:       meba
- License path:  C:\Users\Student\AppData\Local\Temp\\c03e44d2-29c0-4988-8d7e-9d66a8da6523;
+ License path:  C:\Users\Student\AppData\Local\Temp\\2cd73a76-ed77-41a5-ac6f-a3aefeae5029;
  FlexNet Licensing error:-5,357
 
 
@@ -141,7 +141,7 @@
  PORT                              50052.0000                    SCALAR
 
  RELEASE= 2025 R1              BUILD= 25.1      UP20241202   VERSION=WINDOWS x64 
- CURRENT JOBNAME=file  15:04:59  MAR 22, 2025 CP=      0.219
+ CURRENT JOBNAME=file  15:55:34  MAR 22, 2025 CP=      0.188
 
      1  FINISH 
 
@@ -241,10 +241,10 @@
 
  ANSYS LICENSE MANAGER ERROR:
  No FlexNet Publisher (FNP) license found for feature Ansys Mechanical Enterprise Solver.
-             FNP license path: C:\Users\Student\AppData\Local\Temp\\c03e44d2-29c0-4988-8d7e-9d66a8da6523
+             FNP license path: C:\Users\Student\AppData\Local\Temp\\2cd73a76-ed77-41a5-ac6f-a3aefeae5029
  No such feature exists.
  Feature:       meba
- License path:  C:\Users\Student\AppData\Local\Temp\\c03e44d2-29c0-4988-8d7e-9d66a8da6523;
+ License path:  C:\Users\Student\AppData\Local\Temp\\2cd73a76-ed77-41a5-ac6f-a3aefeae5029;
  FlexNet Licensing error:-5,357
 
 
@@ -264,7 +264,7 @@
  |                                                                             |
  |-----------------------------------------------------------------------------|
  |                                                                             |
- |        CP Time      (sec) =          1.047       Time  =  15:05:01          |
+ |        CP Time      (sec) =          1.094       Time  =  15:55:36          |
  |        Elapsed Time (sec) =          7.000       Date  =  03/22/2025        |
  |                                                                             |
  *-----------------------------------------------------------------------------*
