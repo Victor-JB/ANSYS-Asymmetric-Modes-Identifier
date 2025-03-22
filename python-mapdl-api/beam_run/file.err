@@ -1,0 +1,11 @@
+/COM,ANSYS RELEASE 2025 R1           BUILD 25.1      UP20241202       15:04:55
+
+ *** WARNING ***                         CP =       0.000   TIME= 00:00:00
+ The geometry is not available.  Issue the RESUME command to restore the 
+ database.  The NUMVAR command is ignored.                               
+
+ *** ERROR ***                           CP =       0.000   TIME= 00:00:00
+ The capability SOLUTION was either not ordered with this Ansys          
+ installation or the appropriate product was not selected for this       
+ session.                                                                
+  Contact your Ansys support person for more information.                
