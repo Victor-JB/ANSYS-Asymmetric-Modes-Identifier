@@ -15,3 +15,14 @@ ParaView (visualization)
 PyVista / VTK in Python (manipulation)
 
 Machine learning pipelines (as NumPy arrays)
+
+4. Manipulating .vtk in ParaView – Quick Tips
+Once you open a mode shape .vtk:
+
+🔧 Useful Filters
+Filter	Purpose
+Warp By Vector	Visualize mode shape deformation
+Calculator	Compute magnitude, apply math ops
+Clip / Slice	View interior or mirror planes
+Glyph	Show vector arrows (displacement)
+Extract Points	Export points as CSV/VTK subset

@@ -1,9 +1,9 @@
-Figure out how to get python running pymapdl and the analysis
-View an example of the sim in ParaVisualizer sim
+
 BE ABLE TO PARAMETERIZE THE STUFF--super important for repeated sim
 FIGURE OUT HOW TO ANALYZE FORCE GENERATED of a thing--HARMONIC ANALYSIS?
 FIGURE OUT HOW TO MAKE IT IN DATASET FOR ML--HOW TO ACTUALLY TRAIN A THING, the inputs and outputs
 Figure out where to put vibrations, vibrating from the ends or from the middle (air excitation?)
+
 Possibly modeling the entire arm; make a geometry and model all of the forces going on in the arm itself...
 ALSO NEED TO VARY MATERIALS OF THE BEAM BEIND MODELED; BASICALLY, MODEL ALL PARAMETERS AND SEE HOW THE RESONANT FREQUENCY CHANGES
 Research how to make a structure that bends more under excitation; curvature amplification
@@ -37,9 +37,6 @@ Uses NumPy to classify whether a mode is symmetric or asymmetric.
 Loops through beams and builds a dataset.
 
 
-
-✅ Fix MAPDL path
-🧪 Test the beam + modal solve
 🧠 Extract asymmetric mode shape
 💥 Run harmonic or static analysis to get actual deformation + force output
 🧠 Use this for your machine learning dataset

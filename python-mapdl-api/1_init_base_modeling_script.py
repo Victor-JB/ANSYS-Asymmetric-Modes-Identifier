@@ -1,4 +1,5 @@
 from ansys.mapdl.core import launch_mapdl
+from datetime import datetime
 import numpy as np
 import os
 
@@ -6,8 +7,10 @@ import os
 # os.environ["MAPDL_EXEC"] = r"C:\Program Files\ANSYS Inc\ANSYS Student\v251\ansys\bin\winx64\ANSYS251.exe"
 # just kidding it works now
 
+time = datetime.now().strftime('%Y%m%d_%H%M%S')
+run_folder = f"beam_run_{time}"
+mapdl = launch_mapdl(run_location=run_folder, override=True)
 # mapdl = launch_mapdl(run_location="beam_run", loglevel="ERROR")
-mapdl = launch_mapdl(run_location="beam_run", override=True)
 
 # print(mapdl) # info on the instance, version, license, etc.
  
@@ -49,7 +52,7 @@ mapdl.post1()
 frequencies = []
 
 # Output folder
-output_dir = "mode_shapes"
+output_dir = f"mode_shapes_{time}"
 os.makedirs(output_dir, exist_ok=True)
 
 for mode_num in range(1, 4):
