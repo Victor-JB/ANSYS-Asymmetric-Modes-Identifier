@@ -29,17 +29,3 @@ def create_beam(mapdl, length, width, height, element_size, material):
     mapdl.allsel()
 
     return mapdl
-
-def generate_configs(materials, lengths, widths, heights):
-    configs = []
-    for mat in materials:
-        for L in lengths:
-            for W in widths:
-                for H in heights:
-                    configs.append({
-                        "material": mat,
-                        "length": L,
-                        "width": W,
-                        "height": H,
-                    })
-    return configs

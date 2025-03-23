@@ -2,16 +2,23 @@
 import pyvista as pv
 import numpy as np
 
+import pyvista as pv
+import numpy as np
+
 def is_mode_asymmetric(vtk_path, axis="Y", tolerance=1e-3):
     """
     Checks whether the nodal displacement field is symmetric across the specified axis.
     """
     mesh = pv.read(vtk_path)
 
-    # Get vector field (usually displacement)
-    vectors = mesh.point_data.active_vectors
-    if vectors is None:
-        raise ValueError("No active vector field (displacement) found in VTK.")
+    # Print available fields
+    print("Available point data:", mesh.point_data.keys())
+
+    # Try to find displacement vector
+    if "Nodal Solution" in mesh.point_data:
+        vectors = mesh.point_data["Nodal Solution"]
+    else:
+        raise ValueError("Displacement field not found in VTK. Available fields: " + str(mesh.point_data.keys()))
 
     coords = mesh.points
     axis_idx = {"X": 0, "Y": 1, "Z": 2}[axis.upper()]

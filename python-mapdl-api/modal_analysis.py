@@ -21,7 +21,7 @@ def run_modal_analysis(mapdl, n_modes=3, output_dir="mode_shapes", base_filename
         frequencies.append(freq)
 
         vtk_file = os.path.join(output_dir, f"{base_filename}_mode_{mode_num}.vtk")
-        mapdl.result.save_as_vtk(vtk_file, mode_num)
+        mapdl.result.save_as_vtk(vtk_file, mode_num - 1)
         vtk_paths.append(vtk_file)
 
     return frequencies, vtk_paths

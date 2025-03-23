@@ -107,8 +107,8 @@
   SHARED MEMORY PARALLEL REQUESTED
     SINGLE PROCESS WITH   2 THREADS REQUESTED
     TOTAL OF     2 CORES REQUESTED
-  INPUT FILE NAME              = C:\Users\Student\Desktop\ANSYS-Asymmetric-Modes-Identifier\python-mapdl-api\beam_run_20250322_180516\.__tmp__.inp
-  OUTPUT FILE NAME             = C:\Users\Student\Desktop\ANSYS-Asymmetric-Modes-Identifier\python-mapdl-api\beam_run_20250322_180516\.__tmp__.out
+  INPUT FILE NAME              = C:\Users\Student\Desktop\ANSYS-Asymmetric-Modes-Identifier\python-mapdl-api\test_runs\beam_0\.__tmp__.inp
+  OUTPUT FILE NAME             = C:\Users\Student\Desktop\ANSYS-Asymmetric-Modes-Identifier\python-mapdl-api\test_runs\beam_0\.__tmp__.out
 
  PARAMETER STATUS-           (   1 PARAMETERS DEFINED)
 
@@ -116,7 +116,7 @@
  PORT                              50052.0000                    SCALAR
 
  RELEASE= 2025 R1              BUILD= 25.1      UP20241202   VERSION=WINDOWS x64 
- CURRENT JOBNAME=file  18:05:18  MAR 22, 2025 CP=      0.156
+ CURRENT JOBNAME=file  00:21:04  MAR 23, 2025 CP=      0.172
 
      1  FINISH 
 

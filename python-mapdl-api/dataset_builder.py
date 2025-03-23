@@ -34,6 +34,7 @@ records = []
 
 # --- Loop Through All Configs ---
 beam_id = 0
+
 for mat in materials:
     for L in lengths:
         for W in widths:
@@ -43,11 +44,11 @@ for mat in materials:
 
                 mapdl = launch_mapdl(run_location=run_dir, override=True, loglevel="ERROR")
                 create_beam(mapdl, length=L, width=W, height=H, element_size=ELEMENT_SIZE, material=mat)
-                freqs, vtk_paths = run_modal_analysis(mapdl, n_modes=NUM_MODES, base_filename=f"beam_{beam_id}", output_dir=run_dir)
+                freqs, vtk_paths = run_modal_analysis(mapdl, n_modes=NUM_MODES, base_filename=f"beam_{beam_id}", output_dir=f"{run_dir}/mode_shapes",)
                 
                 for mode_idx, (f, vtk_path) in enumerate(zip(freqs, vtk_paths), 1):
                     is_asym = is_mode_asymmetric(vtk_path)
-                    force = estimate_force(freq=f, mass=mat['DENS'], amplitude=0.001)  # Small amplitude approx
+                    force = estimate_force(freq=f, mass=mat['DENS'], amplitude=0.001)
 
                     records.append({
                         "beam_id": beam_id,
@@ -69,11 +70,13 @@ for mat in materials:
                 beam_id += 1
 
 # --- Save dataset to CSV and NPZ ---
+# Save dataset
+os.makedirs("dataset", exist_ok=True)
 df = pd.DataFrame(records)
-df.to_csv("asymmetric_mode_dataset.csv", index=False)
+df.to_csv("dataset/asymmetric_mode_dataset.csv", index=False)
 
 # Also save .npz for ML
-np.savez_compressed("asymmetric_mode_dataset.npz",
+np.savez_compressed("dataset/asymmetric_mode_dataset.npz",
     X=df[["EX", "PR", "DENS", "L", "W", "H", "mode"]].values,
     y_force=df["force"].values,
     y_freq=df["frequency"].values,
