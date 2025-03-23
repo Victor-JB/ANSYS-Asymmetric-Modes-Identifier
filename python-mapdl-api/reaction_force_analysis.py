@@ -1,6 +1,7 @@
 # File: reaction_force_analysis.py
 from ansys.mapdl.core import launch_mapdl
 import numpy as np
+import pyvista as pv
 import os
 
 def apply_modal_bc_and_get_reaction_force(
@@ -13,8 +14,7 @@ def apply_modal_bc_and_get_reaction_force(
     """
     Run static analysis with modal displacement as prescribed BC to extract reaction force.
     """
-    import pyvista as pv
-
+    
     mesh = pv.read(mode_shape_vtk)
 
     # Extract displacement field

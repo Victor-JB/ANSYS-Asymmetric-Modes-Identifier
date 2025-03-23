@@ -4,6 +4,7 @@ FIGURE OUT HOW TO ANALYZE FORCE GENERATED of a thing--HARMONIC ANALYSIS?
 FIGURE OUT HOW TO MAKE IT IN DATASET FOR ML--HOW TO ACTUALLY TRAIN A THING, the inputs and outputs
 Figure out where to put vibrations, vibrating from the ends or from the middle (air excitation?)
 LOOK INTO SWITCHED NEURAL NETS FOR BETTER FUNCTION APPROXIMATION
+LOOK INTO MULTITHREADING FOR CORES FOR SPEEDY SIMULATION!
 
 Possibly modeling the entire arm; make a geometry and model all of the forces going on in the arm itself...
 ALSO NEED TO VARY MATERIALS OF THE BEAM BEIND MODELED; BASICALLY, MODEL ALL PARAMETERS AND SEE HOW THE RESONANT FREQUENCY CHANGES

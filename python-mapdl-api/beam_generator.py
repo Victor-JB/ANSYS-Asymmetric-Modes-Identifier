@@ -4,7 +4,7 @@
 Define Parametric Beam Geometry to use with other pyMAPDL analysis files
 """
 
-def create_beam(mapdl, length, width, height, element_size, material):
+def create_beam(mapdl, length, width, height, element_size, material, cdb_dir=None):
     mapdl.clear()
     mapdl.prep7()
 
@@ -28,8 +28,8 @@ def create_beam(mapdl, length, width, height, element_size, material):
     mapdl.d("ALL", "ALL")
     mapdl.allsel()
 
-    # Export geometry to MAPDL commands file
-    mapdl.cdwrite("DB", f"beam_export_{material['name']}_{length:.2f}_{width:.2f}_{height:.2f}", "cdb")
-
+    if cdb_dir:
+        # Save .cdb for later recovery (used by reaction_force_analysis)
+        mapdl.cdwrite("DB", f"{cdb_dir}/beam", "cdb")
 
     return mapdl
