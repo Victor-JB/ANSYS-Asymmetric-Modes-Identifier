@@ -28,4 +28,8 @@ def create_beam(mapdl, length, width, height, element_size, material):
     mapdl.d("ALL", "ALL")
     mapdl.allsel()
 
+    # Export geometry to MAPDL commands file
+    mapdl.cdwrite("DB", f"beam_export_{material['name']}_{length:.2f}_{width:.2f}_{height:.2f}", "cdb")
+
+
     return mapdl
