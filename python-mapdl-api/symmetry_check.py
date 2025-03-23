@@ -12,13 +12,15 @@ def is_mode_asymmetric(vtk_path, axis="Y", tolerance=1e-3):
     mesh = pv.read(vtk_path)
 
     # Print available fields
-    print("Available point data:", mesh.point_data.keys())
+    # print("Available point data:", mesh.point_data.keys())
 
-    # Try to find displacement vector
-    if "Nodal Solution" in mesh.point_data:
-        vectors = mesh.point_data["Nodal Solution"]
+    for name in mesh.point_data:
+        if mesh.point_data[name].ndim == 2 and mesh.point_data[name].shape[1] == 3:
+            vectors = mesh.point_data[name]
+            mesh.point_data.active_vectors_name = name
+            break
     else:
-        raise ValueError("Displacement field not found in VTK. Available fields: " + str(mesh.point_data.keys()))
+        raise ValueError("No 3D vector field found in VTK. Fields: " + str(mesh.point_data.keys()))
 
     coords = mesh.points
     axis_idx = {"X": 0, "Y": 1, "Z": 2}[axis.upper()]

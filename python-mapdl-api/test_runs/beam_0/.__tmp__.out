@@ -116,7 +116,7 @@
  PORT                              50052.0000                    SCALAR
 
  RELEASE= 2025 R1              BUILD= 25.1      UP20241202   VERSION=WINDOWS x64 
- CURRENT JOBNAME=file  00:21:04  MAR 23, 2025 CP=      0.172
+ CURRENT JOBNAME=file  00:32:19  MAR 23, 2025 CP=      0.203
 
      1  FINISH 
 
@@ -145,10 +145,6 @@
 
  *** NOTE ***                            CP =       0.000   TIME= 00:00:00
  Geometry is not available.  Issue RESUME to restore database.           
-
- *** NOTE ***                            CP =       0.000   TIME= 00:00:00
- Unable to open default results file                                     
-  Use FILE command to open a results file.                               
 
  *** WARNING ***                         CP =       0.000   TIME= 00:00:00
  The geometry is not available.  Issue the RESUME command to restore the 
@@ -247,3 +243,39 @@
  You have already entered the general postprocessor (POST1).             
 
  /OUTPUT FILE=         
+
+ /OUTPUT FILE=         
+
+ /OUTPUT FILE=         
+
+ EXIT MAPDL WHILE IN SERVER MODE
+
+ SAVE ALL MODEL, SOLUTION AND POST DATA
+
+ ALL CURRENT MAPDL DATA WRITTEN TO FILE NAME= 
+  FOR POSSIBLE RESUME FROM THIS POINT
+
+
+ NUMBER OF WARNING MESSAGES ENCOUNTERED=          1
+ NUMBER OF ERROR   MESSAGES ENCOUNTERED=          0
+
+
+ *-----------------------------------------------------------------------------*
+ |                                                                             |
+ |                               RUN COMPLETED                                 |
+ |                                                                             |
+ |-----------------------------------------------------------------------------|
+ |                                                                             |
+ |  Ansys MAPDL 2025 R1         Build 25.1         UP20241202    WINDOWS x64   |
+ |                                                                             |
+ |-----------------------------------------------------------------------------|
+ |                                                                             |
+ |  Database Requested(-db)  1024 MB     Scratch Memory Requested      1024 MB |
+ |  Maximum Database Used       1 MB     Maximum Scratch Memory Used     40 MB |
+ |                                                                             |
+ |-----------------------------------------------------------------------------|
+ |                                                                             |
+ |        CP Time      (sec) =          2.031       Time  =  00:32:21          |
+ |        Elapsed Time (sec) =          5.000       Date  =  03/23/2025        |
+ |                                                                             |
+ *-----------------------------------------------------------------------------*
