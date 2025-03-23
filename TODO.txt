@@ -5,7 +5,21 @@ FIGURE OUT HOW TO ANALYZE FORCE GENERATED of a thing--HARMONIC ANALYSIS?
 FIGURE OUT HOW TO MAKE IT IN DATASET FOR ML--HOW TO ACTUALLY TRAIN A THING, the inputs and outputs
 Figure out where to put vibrations, vibrating from the ends or from the middle (air excitation?)
 Possibly modeling the entire arm; make a geometry and model all of the forces going on in the arm itself...
+ALSO NEED TO VARY MATERIALS OF THE BEAM BEIND MODELED; BASICALLY, MODEL ALL PARAMETERS AND SEE HOW THE RESONANT FREQUENCY CHANGES
+Research how to make a structure that bends more under excitation; curvature amplification
+https://acousticstoday.org/wp-content/uploads/2019/10/STRUCTURAL-ACOUSTICS-TUTORIAL%E2%80%94PART-1-VIBRATIONS-IN-STRUCTURES-Stephen-A.-Hambric.pdf
 
+
+Prompt: In the create beam py file you gave me, I would like to explore a large space of all possible
+material / structural combinations to get a thorough analysis of what materials and structures generate what kinds
+of asymmetric modes, and have a full, thorough dataset of this for my model; how would it be possible to
+systematically run through a bunch of simulations of different parameters (as in, run 1000 simulations of
+steel material with 1000 different structures, with 1000 different parameter variations for the structure being simulated,
+and get a large swath of the combination space and get a bunch of asymmetric mode examples over different
+materials and structure combinations)?
+
+I also need to check the space of all vibrational amplitudes and frequencies; just have the analysis do this
+and compile it into a dataset
 
 run_modal_basic.py (base file):
 Runs a modal analysis on one beam, extracts frequency, and saves the mode shape as a .vtk.

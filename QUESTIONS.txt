@@ -1,0 +1,2 @@
+1. what does color map mean in paraview?
+how can I animate the asymmetric mode, frequency, just so I can see it?
