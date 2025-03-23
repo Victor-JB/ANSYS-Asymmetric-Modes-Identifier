@@ -1,3 +1,4 @@
+# File: modal_analysis.py
 import os
 
 def run_modal_analysis(mapdl, n_modes=3, output_dir="mode_shapes", base_filename="beam"):
@@ -12,14 +13,15 @@ def run_modal_analysis(mapdl, n_modes=3, output_dir="mode_shapes", base_filename
     mapdl.post1()
     os.makedirs(output_dir, exist_ok=True)
     frequencies = []
+    vtk_paths = []
 
     for mode_num in range(1, n_modes + 1):
         mapdl.set(1, mode_num)
         freq = mapdl.get_value("MODE", mode_num, "FREQ")
         frequencies.append(freq)
 
-        # Save mode shape
         vtk_file = os.path.join(output_dir, f"{base_filename}_mode_{mode_num}.vtk")
         mapdl.result.save_as_vtk(vtk_file, mode_num)
+        vtk_paths.append(vtk_file)
 
-    return frequencies
+    return frequencies, vtk_paths
