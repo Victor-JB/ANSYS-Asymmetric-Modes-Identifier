@@ -1,0 +1,17 @@
+The .vtk file created by mapdl.result.save_as_vtk(...) is an unstructured grid containing:
+
+📌 Nodal positions (the mesh)
+
+🧭 Vector fields like nodal displacement
+
+🎨 Scalar fields like node number, magnitude of displacement
+
+🧠 Metadata about elements and node IDs
+
+It's designed for use in:
+
+ParaView (visualization)
+
+PyVista / VTK in Python (manipulation)
+
+Machine learning pipelines (as NumPy arrays)

@@ -116,7 +116,7 @@
  PORT                              50052.0000                    SCALAR
 
  RELEASE= 2025 R1              BUILD= 25.1      UP20241202   VERSION=WINDOWS x64 
- CURRENT JOBNAME=file  16:30:58  MAR 22, 2025 CP=      0.109
+ CURRENT JOBNAME=file  17:29:03  MAR 22, 2025 CP=      0.078
 
      1  FINISH 
 
@@ -146,10 +146,6 @@
  *** NOTE ***                            CP =       0.000   TIME= 00:00:00
  Geometry is not available.  Issue RESUME to restore database.           
 
- *** NOTE ***                            CP =       0.000   TIME= 00:00:00
- Unable to open default results file                                     
-  Use FILE command to open a results file.                               
-
  *** WARNING ***                         CP =       0.000   TIME= 00:00:00
  The geometry is not available.  Issue the RESUME command to restore the 
  database.  The NUMVAR command is ignored.                               
@@ -158,6 +154,8 @@
  ***** ROUTINE COMPLETED *****  CP =         0.000
 
 
+
+ /OUTPUT FILE=         
 
  /OUTPUT FILE=         
 

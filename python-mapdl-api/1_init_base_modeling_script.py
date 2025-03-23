@@ -7,9 +7,9 @@ import os
 # just kidding it works now
 
 # mapdl = launch_mapdl(run_location="beam_run", loglevel="ERROR")
-mapdl = launch_mapdl(run_location="beam_run")
+mapdl = launch_mapdl(run_location="beam_run", override=True)
 
-print(mapdl) # info on the instance, version, license, etc.
+# print(mapdl) # info on the instance, version, license, etc.
  
 # Start MAPDL
 mapdl.clear()

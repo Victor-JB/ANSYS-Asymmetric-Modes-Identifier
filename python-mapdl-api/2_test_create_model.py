@@ -3,10 +3,13 @@ import numpy as np
 import os
 
 # having to set environment variable for MAPDL executable path because 'exec_path' arg doesn't exist anymore
-os.environ["MAPDL_EXEC"] = r"C:\Program Files\ANSYS Inc\ANSYS Student\v251\ansys\bin\winx64\ANSYS251.exe"
+# os.environ["MAPDL_EXEC"] = r"C:\Program Files\ANSYS Inc\ANSYS Student\v251\ansys\bin\winx64\ANSYS251.exe"
+# just kidding it works now
 
-mapdl = launch_mapdl(run_location="beam_run", loglevel="ERROR")
-      # hide detail logs
+# mapdl = launch_mapdl(run_location="beam_run", loglevel="ERROR")
+mapdl = launch_mapdl(run_location="beam_run", override=True)
+
+# print(mapdl) # info on the instance, version, license, etc.
 
 ###############################################################################
 # 2. Preprocessing
