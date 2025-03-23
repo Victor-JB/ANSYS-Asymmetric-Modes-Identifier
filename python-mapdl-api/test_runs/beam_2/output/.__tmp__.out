@@ -107,8 +107,8 @@
   SHARED MEMORY PARALLEL REQUESTED
     SINGLE PROCESS WITH   2 THREADS REQUESTED
     TOTAL OF     2 CORES REQUESTED
-  INPUT FILE NAME              = C:\Users\Student\Desktop\ANSYS-Asymmetric-Modes-Identifier\python-mapdl-api\test_runs\beam_0\.__tmp__.inp
-  OUTPUT FILE NAME             = C:\Users\Student\Desktop\ANSYS-Asymmetric-Modes-Identifier\python-mapdl-api\test_runs\beam_0\.__tmp__.out
+  INPUT FILE NAME              = C:\Users\Student\Desktop\ANSYS-Asymmetric-Modes-Identifier\python-mapdl-api\test_runs\beam_2\output\.__tmp__.inp
+  OUTPUT FILE NAME             = C:\Users\Student\Desktop\ANSYS-Asymmetric-Modes-Identifier\python-mapdl-api\test_runs\beam_2\output\.__tmp__.out
 
  PARAMETER STATUS-           (   1 PARAMETERS DEFINED)
 
@@ -116,7 +116,7 @@
  PORT                              50052.0000                    SCALAR
 
  RELEASE= 2025 R1              BUILD= 25.1      UP20241202   VERSION=WINDOWS x64 
- CURRENT JOBNAME=file  00:52:27  MAR 23, 2025 CP=      0.156
+ CURRENT JOBNAME=file  01:45:53  MAR 23, 2025 CP=      0.172
 
      1  FINISH 
 
@@ -145,6 +145,10 @@
 
  *** NOTE ***                            CP =       0.000   TIME= 00:00:00
  Geometry is not available.  Issue RESUME to restore database.           
+
+ *** NOTE ***                            CP =       0.000   TIME= 00:00:00
+ Unable to open default results file                                     
+  Use FILE command to open a results file.                               
 
  *** WARNING ***                         CP =       0.000   TIME= 00:00:00
  The geometry is not available.  Issue the RESUME command to restore the 
@@ -191,7 +195,7 @@
 
  /OUTPUT FILE=         
 
- VECTOR GET OPERATION  _MYVGET_  VECTOR LENGTH=     189
+ VECTOR GET OPERATION  _MYVGET_  VECTOR LENGTH=     700
  NAME= NODE         0  NLIS      
 
  /OUTPUT FILE=         
@@ -273,11 +277,11 @@
  |-----------------------------------------------------------------------------|
  |                                                                             |
  |  Database Requested(-db)  1024 MB     Scratch Memory Requested      1024 MB |
- |  Maximum Database Used       1 MB     Maximum Scratch Memory Used     40 MB |
+ |  Maximum Database Used       1 MB     Maximum Scratch Memory Used     44 MB |
  |                                                                             |
  |-----------------------------------------------------------------------------|
  |                                                                             |
- |        CP Time      (sec) =          1.828       Time  =  00:52:29          |
- |        Elapsed Time (sec) =          4.000       Date  =  03/23/2025        |
+ |        CP Time      (sec) =          2.172       Time  =  01:45:55          |
+ |        Elapsed Time (sec) =          5.000       Date  =  03/23/2025        |
  |                                                                             |
  *-----------------------------------------------------------------------------*

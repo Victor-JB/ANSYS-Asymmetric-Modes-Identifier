@@ -11,16 +11,16 @@ import os
 # -------------------
 # GLOBAL PARAMETERS
 # -------------------
-BEAM_ID = 0
+BEAM_ID = 2
 RUN_DIR = f"test_runs/beam_{BEAM_ID}"
 N_MODES = 3
-ELEMENT_SIZE = 0.05
-AMPLITUDE = 0.001  # Assumed modal amplitude for force estimation
+ELEMENT_SIZE = 0.03 # meters; Element size for meshing the beam
+AMPLITUDE = 0.5  # meters; Assumed modal amplitude for force estimation
 
 # Geometry (meters)
 LENGTH = 1.0
 WIDTH = 0.1
-HEIGHT = 0.1
+HEIGHT = 0.07
 
 # Material: Steel
 MATERIAL = {
@@ -34,7 +34,7 @@ MATERIAL = {
 # RUN SIMULATION
 # -------------------
 os.makedirs(RUN_DIR, exist_ok=True)
-mapdl = launch_mapdl(run_location=RUN_DIR, override=True, loglevel="ERROR")
+mapdl = launch_mapdl(run_location=f"{RUN_DIR}/output", override=True, loglevel="ERROR")
 
 create_beam(mapdl, length=LENGTH, width=WIDTH, height=HEIGHT,
             element_size=ELEMENT_SIZE, material=MATERIAL)
@@ -49,7 +49,7 @@ frequencies, vtk_paths = run_modal_analysis(
 print("\n--- Simulation Results ---")
 for mode_idx, (freq, vtk_file) in enumerate(zip(frequencies, vtk_paths), 1):
     is_asym = is_mode_asymmetric(vtk_file)
-    force = estimate_force_from_vtk(freq=freq, mass=MATERIAL['DENS'], amplitude=AMPLITUDE)
+    force = estimate_force_from_vtk(vtk_file, axis="X", amplitude=AMPLITUDE)
 
     print(f"Mode {mode_idx}:")
     print(f"  Frequency: {freq:.2f} Hz")
