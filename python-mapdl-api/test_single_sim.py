@@ -4,7 +4,7 @@ from ansys.mapdl.core import launch_mapdl
 from beam_generator import create_beam
 from modal_analysis import run_modal_analysis
 from symmetry_check import is_mode_asymmetric
-from force_estimator import estimate_force
+from force_estimator import estimate_force_from_vtk
 
 import os
 
@@ -49,7 +49,7 @@ frequencies, vtk_paths = run_modal_analysis(
 print("\n--- Simulation Results ---")
 for mode_idx, (freq, vtk_file) in enumerate(zip(frequencies, vtk_paths), 1):
     is_asym = is_mode_asymmetric(vtk_file)
-    force = estimate_force(freq=freq, mass=MATERIAL['DENS'], amplitude=AMPLITUDE)
+    force = estimate_force_from_vtk(freq=freq, mass=MATERIAL['DENS'], amplitude=AMPLITUDE)
 
     print(f"Mode {mode_idx}:")
     print(f"  Frequency: {freq:.2f} Hz")
