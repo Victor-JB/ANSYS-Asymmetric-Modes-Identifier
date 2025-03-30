@@ -1,6 +1,6 @@
 Had to create a venv running python 3.10.00 because wouldn't work on higher versions
-Created venv, activated it using python 10 install 
+Created venv, activated it using python 310 install 
 Ran pip install --upgrade pip setuptools wheel
 Installed pip install numpy and pip install cython first because of errors given
 Then ran pip install ansys-mapdl-core ansys-mapdl-reader
-And it worked! 
+And it worked!
