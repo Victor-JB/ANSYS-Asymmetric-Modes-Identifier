@@ -44,11 +44,10 @@ if __name__ == "__main__":
     print("Attempting to launch MAPDL...")
     mapdl = launch_mapdl(run_location=f"{RUN_DIR}/output", override=True, loglevel="ERROR")
     print("MAPDL launched successfully!")
-
     
     try:
         create_beam(mapdl, length=LENGTH, width=WIDTH, height=HEIGHT,
-                    element_size=ELEMENT_SIZE, material=MATERIAL, cdb_dir=f"{RUN_DIR}/output")
+                    element_size=ELEMENT_SIZE, material=MATERIAL, mesh_dir=f"{RUN_DIR}/mode_shapes")
 
         frequencies, vtk_paths = run_modal_analysis(
             mapdl,

@@ -1,12 +1,14 @@
 The .vtk file created by mapdl.result.save_as_vtk(...) is an unstructured grid containing:
 
 📌 Nodal positions (the mesh)
-
 🧭 Vector fields like nodal displacement
-
 🎨 Scalar fields like node number, magnitude of displacement
-
 🧠 Metadata about elements and node IDs
+
+Yes, VTK files contain meshing information. 
+They store the geometry (point coordinates) and topology (connectivity of elements) of a mesh. 
+Essentially, a VTK file defines how a mesh is structured, including the arrangement of points 
+and how they are connected to form elements like triangles, tetrahedra, etc. 
 
 It's designed for use in:
 
@@ -31,11 +33,69 @@ Extract Points	Export points as CSV/VTK subset
 // MODAL REACTION FORCE
 What You Actually Want: Modal Reaction Force at Beam End
 Since you're interested in:
-
 💡 “How much force does the beam deliver to the object it’s embedded in when vibrating?”
-
 You want to compute:
-
 The reaction force at one or both ends
-
 In response to a unit modal displacement scaled by a known amplitude
+
+
+// ------------------------------------------------ //
+HOW TO PROPERLY RENDER VTK
+Step 2: See the Mesh
+To show the actual mesh triangulation:
+
+In the top toolbar, click “Wireframe” from the dropdown (next to Surface)
+
+Or go to the Properties panel, find Representation → set to Wireframe
+
+You’ll now see the finite element grid
+
+✅ This shows:
+
+Element density (from meshing)
+
+Node connectivity
+
+Triangulation (for surface plots)
+
+How complex your model was discretized
+
+🧠 Optional: Show Node Numbers
+In Properties panel, scroll to “Labels”
+
+Check “Point Labels”
+
+From the dropdown, select Point ID (or ansys_node_num if available)
+
+Now every node has its ID displayed on screen!
+
+💥 Step 3: Show Deformation
+To visualize the vibrational mode shape:
+
+Filters → Warp By Vector → Click Apply
+
+This uses "Nodal Solution" (or "Nodal Solution 0") to displace the mesh
+
+You’ll now see a 3D deformation shape
+
+You can scale the deformation if it’s tiny:
+
+In the Warp filter settings: change Scale Factor (e.g. 10x, 100x)
+
+🌈 Step 4: Add a Color Map
+To color the displacement field:
+
+In Color By dropdown, choose "Nodal Solution" or "Nodal Solution 0"
+
+Set the component (X, Y, Z or magnitude)
+
+Click Rescale to Data Range
+
+▶️ Step 5: Animate the Mode
+Go to View > Animation View
+
+Add a Camera Orbit or Warp scaling sweep
+
+Hit Play (bottom toolbar) to animate mode shape
+
+You can also loop the deformation in Python/ParaView script if needed.
