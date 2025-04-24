@@ -12,7 +12,7 @@ from reaction_force_analysis import apply_modal_bc_and_get_reaction_force
 # -------------------
 # GLOBAL PARAMETERS
 # -------------------
-BEAM_ID = 3
+BEAM_ID = 4
 RUN_DIR = f"test_runs/beam_{BEAM_ID}"
 N_MODES = 3
 ELEMENT_SIZE = 0.03 # meters; Element size for meshing the beam
