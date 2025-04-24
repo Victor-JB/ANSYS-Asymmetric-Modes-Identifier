@@ -1,3 +1,9 @@
+
+Next up:
+- See the mesh
+- Figure out how to clamp ends
+- figure out how to parameterize the whole arm
+
 FIGURE OUT HOW TO ANALYZE FORCE GENERATED of a thing--HARMONIC ANALYSIS?
 
 Figure out where to put vibrations, vibrating from the ends or from the middle (air excitation?)
@@ -5,18 +11,23 @@ Figure out where to put vibrations, vibrating from the ends or from the middle (
 
 LOOK INTO SWITCHED NEURAL NETS FOR BETTER FUNCTION APPROXIMATION
 LOOK INTO MULTITHREADING FOR CORES FOR SPEEDY SIMULATION!
+ - Simulation time analysis, optimize and multithread for all of this
 
 Parameterize for soft materials — dragon skin or other such materials
-Why do they need to be soft? Why does the vibration material need to be soft?
-Make it out of soft materials to have the entire arm vibrate
-Make heterogeneous structure
-We are trying to get the arm to vibrate
-Visualize mesh of thing 
+ - needed if parameterizing the arm itself to have asymmetric modes
+
+ vibrate arm at 1 mode, curvature; vibrate arm at another mode, another curvature!
+ - need heterogeneous structure
+
+Visualize mesh of thing
+
 Parameterize with splines + different materials, most important right now
-Fix the ends of the model and do force analysis
-Simulation time analysis, optimize and multithread for all of this
+
 Discussed how it becomes a nonlinear optimization problem that we’re using Ansys for?
+ 
 Parameterize the output of asymmetric modes once generated, use that format as the input to the neural net for it to find the structure
+ - I give it an input arm parameterization, it gives me output; flip it for the NN
+
 Qs:
 Do I only need to include asymmetric modes in the dataset? Depends on ML inputs…
 1. no, include both so the model has an idea; just test both
@@ -28,7 +39,6 @@ ANSWERS:
 1. the input of the model is a paramterized beam of our design, parameterized according to my system
 Would be cool to make a drawing gui through which the model could be interacted with--for funzies,
 even make it text based??
-
 
 Possibly modeling the entire arm; make a geometry and model all of the forces going on in the arm itself...
 ALSO NEED TO VARY MATERIALS OF THE BEAM BEIND MODELED; BASICALLY, MODEL ALL PARAMETERS AND SEE HOW THE RESONANT FREQUENCY CHANGES

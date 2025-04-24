@@ -107,8 +107,8 @@
   SHARED MEMORY PARALLEL REQUESTED
     SINGLE PROCESS WITH   2 THREADS REQUESTED
     TOTAL OF     2 CORES REQUESTED
-  INPUT FILE NAME              = C:\Users\Student\Desktop\ANSYS-Asymmetric-Modes-Identifier\python-mapdl-api\test_runs\beam_0\output\.__tmp__.inp
-  OUTPUT FILE NAME             = C:\Users\Student\Desktop\ANSYS-Asymmetric-Modes-Identifier\python-mapdl-api\test_runs\beam_0\output\.__tmp__.out
+  INPUT FILE NAME              = C:\Users\Student\Desktop\ANSYS-Asymmetric-Modes-Identifier\python-mapdl-api\test_runs\beam_1\output\.__tmp__.inp
+  OUTPUT FILE NAME             = C:\Users\Student\Desktop\ANSYS-Asymmetric-Modes-Identifier\python-mapdl-api\test_runs\beam_1\output\.__tmp__.out
 
  PARAMETER STATUS-           (   1 PARAMETERS DEFINED)
 
@@ -116,7 +116,7 @@
  PORT                              50052.0000                    SCALAR
 
  RELEASE= 2025 R1              BUILD= 25.1      UP20241202   VERSION=WINDOWS x64 
- CURRENT JOBNAME=file  01:43:58  MAR 23, 2025 CP=      0.203
+ CURRENT JOBNAME=file  15:13:21  APR 24, 2025 CP=      0.125
 
      1  FINISH 
 
@@ -206,65 +206,6 @@
 
  /OUTPUT FILE=         
 
- /OUTPUT FILE=         
-
- /OUTPUT FILE=         
-
- /OUTPUT FILE=         
-
- /OUTPUT FILE=         
-
- /OUTPUT FILE=         
-
- /OUTPUT FILE=         
-
- /OUTPUT FILE=         
-
- /OUTPUT FILE=         
-
- /OUTPUT FILE=         
- You have already entered the general postprocessor (POST1).             
-
- /OUTPUT FILE=         
- You have already entered the general postprocessor (POST1).             
-
- /OUTPUT FILE=         
-
- /OUTPUT FILE=         
-
- /OUTPUT FILE=         
- You have already entered the general postprocessor (POST1).             
-
- /OUTPUT FILE=         
- You have already entered the general postprocessor (POST1).             
-
- /OUTPUT FILE=         
-
- /OUTPUT FILE=         
-
- /OUTPUT FILE=         
- You have already entered the general postprocessor (POST1).             
-
- /OUTPUT FILE=         
- You have already entered the general postprocessor (POST1).             
-
- /OUTPUT FILE=         
-
- /OUTPUT FILE=         
-
- /OUTPUT FILE=         
-
- EXIT MAPDL WHILE IN SERVER MODE
-
- SAVE ALL MODEL, SOLUTION AND POST DATA
-
- ALL CURRENT MAPDL DATA WRITTEN TO FILE NAME= 
-  FOR POSSIBLE RESUME FROM THIS POINT
-
-
- NUMBER OF WARNING MESSAGES ENCOUNTERED=          1
- NUMBER OF ERROR   MESSAGES ENCOUNTERED=          0
-
 
  *-----------------------------------------------------------------------------*
  |                                                                             |
@@ -277,11 +218,11 @@
  |-----------------------------------------------------------------------------|
  |                                                                             |
  |  Database Requested(-db)  1024 MB     Scratch Memory Requested      1024 MB |
- |  Maximum Database Used       1 MB     Maximum Scratch Memory Used     44 MB |
+ |  Maximum Database Used       1 MB     Maximum Scratch Memory Used      5 MB |
  |                                                                             |
  |-----------------------------------------------------------------------------|
  |                                                                             |
- |        CP Time      (sec) =          2.406       Time  =  01:44:00          |
- |        Elapsed Time (sec) =          5.000       Date  =  03/23/2025        |
+ |        CP Time      (sec) =          0.500       Time  =  15:13:37          |
+ |        Elapsed Time (sec) =         19.000       Date  =  04/24/2025        |
  |                                                                             |
  *-----------------------------------------------------------------------------*

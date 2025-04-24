@@ -2,7 +2,9 @@
 import os
 
 def run_modal_analysis(mapdl, n_modes=3, output_dir="mode_shapes", base_filename="beam"):
-    mapdl.finish()
+    print("Running modal analysis...")
+    print(f"Number of modes to extract: {n_modes}")
+
     mapdl.slashsolu()
     mapdl.antype("MODAL")
     mapdl.modopt("LANB", n_modes)
@@ -24,4 +26,7 @@ def run_modal_analysis(mapdl, n_modes=3, output_dir="mode_shapes", base_filename
         mapdl.result.save_as_vtk(vtk_file, mode_num - 1)
         vtk_paths.append(vtk_file)
 
+    mapdl.finish()
+
+    print(f"{n_modes} found succesfully\n")
     return frequencies, vtk_paths
