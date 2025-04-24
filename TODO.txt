@@ -4,6 +4,8 @@ Next up:
 - Figure out how to clamp ends
 - figure out how to parameterize the whole arm
 
+- possibly look into pre-built ParaView .pvsm session file that opens a mode and sets all this up automatically?
+
 FIGURE OUT HOW TO ANALYZE FORCE GENERATED of a thing--HARMONIC ANALYSIS?
 
 Figure out where to put vibrations, vibrating from the ends or from the middle (air excitation?)

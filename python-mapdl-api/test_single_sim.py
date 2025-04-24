@@ -15,7 +15,9 @@ from reaction_force_analysis import apply_modal_bc_and_get_reaction_force
 BEAM_ID = 1
 RUN_DIR = f"test_runs/beam_{BEAM_ID}"
 N_MODES = 3
-ELEMENT_SIZE = 0.03 # meters; Element size for meshing the beam
+
+# You can run a mesh convergence study if you're unsure how fine the mesh needs to be
+ELEMENT_SIZE = 0.009 # meters; Element size for meshing the beam, smaller means finer precision
 AMPLITUDE = 0.5  # meters; Assumed modal amplitude for force estimation
 
 # Geometry (meters)
@@ -38,6 +40,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--accurate-force", action="store_true",
                         help="Use reaction force analysis instead of vector-based estimate.")
+    parser.add_argument("--save-cdb", help="True or false to save cdb file", default="False")
     args = parser.parse_args()
 
     os.makedirs(RUN_DIR, exist_ok=True)
@@ -46,8 +49,14 @@ if __name__ == "__main__":
     print("MAPDL launched successfully!")
     
     try:
+        print(args.save_cdb)
+        if args.save_cdb == "True":
+            mesh_dir = f"{RUN_DIR}/mode_shapes"
+        else:
+            mesh_dir = None
+        
         create_beam(mapdl, length=LENGTH, width=WIDTH, height=HEIGHT,
-                    element_size=ELEMENT_SIZE, material=MATERIAL, mesh_dir=f"{RUN_DIR}/mode_shapes")
+                    element_size=ELEMENT_SIZE, material=MATERIAL, mesh_dir=mesh_dir)
 
         frequencies, vtk_paths = run_modal_analysis(
             mapdl,

@@ -116,7 +116,7 @@
  PORT                              50052.0000                    SCALAR
 
  RELEASE= 2025 R1              BUILD= 25.1      UP20241202   VERSION=WINDOWS x64 
- CURRENT JOBNAME=file  15:30:56  APR 24, 2025 CP=      0.094
+ CURRENT JOBNAME=file  15:51:21  APR 24, 2025 CP=      0.062
 
      1  FINISH 
 
@@ -195,7 +195,7 @@
 
  /OUTPUT FILE=         
 
- VECTOR GET OPERATION  _MYVGET_  VECTOR LENGTH=     700
+ VECTOR GET OPERATION  _MYVGET_  VECTOR LENGTH=   13221
  NAME= NODE         0  NLIS      
 
  /OUTPUT FILE=         
@@ -205,6 +205,75 @@
  /OUTPUT FILE=         
 
  /OUTPUT FILE=         
+
+ /OUTPUT FILE=         
+
+ /OUTPUT FILE=         
+
+ /OUTPUT FILE=         
+
+ /OUTPUT FILE=         
+
+ /OUTPUT FILE=         
+
+ /OUTPUT FILE=         
+
+ /OUTPUT FILE=         
+
+ /OUTPUT FILE=         
+ You have already entered the general postprocessor (POST1).             
+
+ /OUTPUT FILE=         
+ You have already entered the general postprocessor (POST1).             
+
+ /OUTPUT FILE=         
+
+ /OUTPUT FILE=         
+
+ /OUTPUT FILE=         
+ You have already entered the general postprocessor (POST1).             
+
+ /OUTPUT FILE=         
+ You have already entered the general postprocessor (POST1).             
+
+ /OUTPUT FILE=         
+
+ /OUTPUT FILE=         
+
+ /OUTPUT FILE=         
+ You have already entered the general postprocessor (POST1).             
+
+ /OUTPUT FILE=         
+ You have already entered the general postprocessor (POST1).             
+
+ /OUTPUT FILE=         
+
+ /OUTPUT FILE=         
+
+ /OUTPUT FILE=         
+
+ /OUTPUT FILE=         
+
+ CLEAR MAPDL DATABASE AND RESTART
+
+ Ansys Mechanical Enterprise Academic Student      
+
+ /OUTPUT FILE=         
+
+ /OUTPUT FILE=         
+
+ /OUTPUT FILE=         
+
+ EXIT MAPDL WHILE IN SERVER MODE
+
+ SAVE ALL MODEL, SOLUTION AND POST DATA
+
+ ALL CURRENT MAPDL DATA WRITTEN TO FILE NAME= 
+  FOR POSSIBLE RESUME FROM THIS POINT
+
+
+ NUMBER OF WARNING MESSAGES ENCOUNTERED=          1
+ NUMBER OF ERROR   MESSAGES ENCOUNTERED=          0
 
 
  *-----------------------------------------------------------------------------*
@@ -218,11 +287,11 @@
  |-----------------------------------------------------------------------------|
  |                                                                             |
  |  Database Requested(-db)  1024 MB     Scratch Memory Requested      1024 MB |
- |  Maximum Database Used       1 MB     Maximum Scratch Memory Used      5 MB |
+ |  Maximum Database Used       1 MB     Maximum Scratch Memory Used    259 MB |
  |                                                                             |
  |-----------------------------------------------------------------------------|
  |                                                                             |
- |        CP Time      (sec) =          0.469       Time  =  15:31:12          |
- |        Elapsed Time (sec) =         18.000       Date  =  04/24/2025        |
+ |        CP Time      (sec) =          4.750       Time  =  15:51:25          |
+ |        Elapsed Time (sec) =          6.000       Date  =  04/24/2025        |
  |                                                                             |
  *-----------------------------------------------------------------------------*
