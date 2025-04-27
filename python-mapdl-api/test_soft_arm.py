@@ -12,6 +12,41 @@ from reaction_force_analysis import apply_modal_bc_and_get_reaction_force
 # -------------------
 # GLOBAL PARAMETERS
 # -------------------
+
+    BEAM_ID = 0
+    RUN_DIR = f"test_runs/tube_{BEAM_ID}"
+    N_MODES = 3
+    ELEMENT_SIZE = 0.02  # meters
+    FIX_BOTH_ENDS = False
+
+    # Tube geometry
+    LENGTH = 0.3
+    OUTER_DIAMETER = 0.04
+    INNER_DIAMETER = 0.03
+
+    # Material: soft silicone
+    MATERIAL = {
+        "name": "silicone",
+        "EX": 1e6,    # Young's modulus (Pa)
+        "PR": 0.49,   # Poisson's ratio (nearly incompressible)
+        "DENS": 1100  # Density (kg/m^3)
+    }
+
+    os.makedirs(RUN_DIR, exist_ok=True)
+    mapdl = launch_mapdl(run_location=f"{RUN_DIR}/output", override=True, loglevel="ERROR")
+
+    create_mckibben_tube(mapdl, length=LENGTH,
+                         outer_diameter=OUTER_DIAMETER,
+                         inner_diameter=INNER_DIAMETER,
+                         element_size=ELEMENT_SIZE,
+                         material=MATERIAL,
+                         mesh_dir=RUN_DIR,
+                         fix_both_ends=FIX_BOTH_ENDS)
+
+    # You can now continue to run modal analysis or harmonic analysis on this geometry!
+
+    mapdl.exit()
+
 BEAM_ID = 1
 RUN_DIR = f"test_runs/beam_{BEAM_ID}"
 N_MODES = 3

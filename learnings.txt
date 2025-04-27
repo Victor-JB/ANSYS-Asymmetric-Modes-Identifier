@@ -1,3 +1,36 @@
+But What Does Modal Analysis Actually Do?
+Important: You are not applying an external force at all
+In modal analysis:
+
+You do not apply loads
+
+You ask ANSYS to find:
+
+The natural frequencies and shapes the system would vibrate in if excited
+
+It solves this eigenvalue problem:
+
+[𝐾−𝜔2𝑀]
+𝜙=0
+[K−ω 2M]
+ϕ=0
+Where:
+
+𝐾
+K is the stiffness matrix
+
+𝑀
+M is the mass matrix
+
+𝜔
+ω are natural frequencies
+
+𝜙
+ϕ are the mode shapes
+
+
+
+
 The .vtk file created by mapdl.result.save_as_vtk(...) is an unstructured grid containing:
 
 📌 Nodal positions (the mesh)

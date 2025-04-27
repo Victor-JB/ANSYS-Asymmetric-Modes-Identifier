@@ -116,7 +116,7 @@
  PORT                              50052.0000                    SCALAR
 
  RELEASE= 2025 R1              BUILD= 25.1      UP20241202   VERSION=WINDOWS x64 
- CURRENT JOBNAME=file  15:51:21  APR 24, 2025 CP=      0.062
+ CURRENT JOBNAME=file  16:22:07  APR 27, 2025 CP=      0.344
 
      1  FINISH 
 
@@ -145,10 +145,6 @@
 
  *** NOTE ***                            CP =       0.000   TIME= 00:00:00
  Geometry is not available.  Issue RESUME to restore database.           
-
- *** NOTE ***                            CP =       0.000   TIME= 00:00:00
- Unable to open default results file                                     
-  Use FILE command to open a results file.                               
 
  *** WARNING ***                         CP =       0.000   TIME= 00:00:00
  The geometry is not available.  Issue the RESUME command to restore the 
@@ -287,11 +283,11 @@
  |-----------------------------------------------------------------------------|
  |                                                                             |
  |  Database Requested(-db)  1024 MB     Scratch Memory Requested      1024 MB |
- |  Maximum Database Used       1 MB     Maximum Scratch Memory Used    259 MB |
+ |  Maximum Database Used       1 MB     Maximum Scratch Memory Used    260 MB |
  |                                                                             |
  |-----------------------------------------------------------------------------|
  |                                                                             |
- |        CP Time      (sec) =          4.750       Time  =  15:51:25          |
- |        Elapsed Time (sec) =          6.000       Date  =  04/24/2025        |
+ |        CP Time      (sec) =          9.781       Time  =  16:22:14          |
+ |        Elapsed Time (sec) =         10.000       Date  =  04/27/2025        |
  |                                                                             |
  *-----------------------------------------------------------------------------*

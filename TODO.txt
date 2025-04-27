@@ -1,8 +1,8 @@
 
 Next up:
-- See the mesh
-- Figure out how to clamp ends
 - figure out how to parameterize the whole arm
+- new functions for beam_generator to generate new structures
+- 
 
 - possibly look into pre-built ParaView .pvsm session file that opens a mode and sets all this up automatically?
 
@@ -20,8 +20,6 @@ Parameterize for soft materials — dragon skin or other such materials
 
  vibrate arm at 1 mode, curvature; vibrate arm at another mode, another curvature!
  - need heterogeneous structure
-
-Visualize mesh of thing
 
 Parameterize with splines + different materials, most important right now
 
