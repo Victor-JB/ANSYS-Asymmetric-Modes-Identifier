@@ -1,7 +1,7 @@
 # File: modal_analysis.py
 import os
 
-def run_modal_analysis(mapdl, n_modes=3, output_dir="mode_shapes", base_filename="beam"):
+def run_modal_analysis(mapdl, base_filename, n_modes=3, output_dir="mode_shapes"):
     print("Running modal analysis...")
     print(f"Number of modes to extract: {n_modes}")
 

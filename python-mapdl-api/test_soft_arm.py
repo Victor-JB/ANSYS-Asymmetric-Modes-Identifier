@@ -3,7 +3,7 @@
 import argparse
 import os
 from ansys.mapdl.core import launch_mapdl
-from beam_generator import create_beam
+from beam_generator import create_mckibben_tube
 from modal_analysis import run_modal_analysis
 from symmetry_check import is_mode_asymmetric
 from force_estimator import estimate_force_from_vtk
@@ -13,60 +13,26 @@ from reaction_force_analysis import apply_modal_bc_and_get_reaction_force
 # GLOBAL PARAMETERS
 # -------------------
 
-    BEAM_ID = 0
-    RUN_DIR = f"test_runs/tube_{BEAM_ID}"
-    N_MODES = 3
-    ELEMENT_SIZE = 0.02  # meters
-    FIX_BOTH_ENDS = False
-
-    # Tube geometry
-    LENGTH = 0.3
-    OUTER_DIAMETER = 0.04
-    INNER_DIAMETER = 0.03
-
-    # Material: soft silicone
-    MATERIAL = {
-        "name": "silicone",
-        "EX": 1e6,    # Young's modulus (Pa)
-        "PR": 0.49,   # Poisson's ratio (nearly incompressible)
-        "DENS": 1100  # Density (kg/m^3)
-    }
-
-    os.makedirs(RUN_DIR, exist_ok=True)
-    mapdl = launch_mapdl(run_location=f"{RUN_DIR}/output", override=True, loglevel="ERROR")
-
-    create_mckibben_tube(mapdl, length=LENGTH,
-                         outer_diameter=OUTER_DIAMETER,
-                         inner_diameter=INNER_DIAMETER,
-                         element_size=ELEMENT_SIZE,
-                         material=MATERIAL,
-                         mesh_dir=RUN_DIR,
-                         fix_both_ends=FIX_BOTH_ENDS)
-
-    # You can now continue to run modal analysis or harmonic analysis on this geometry!
-
-    mapdl.exit()
-
-BEAM_ID = 1
-RUN_DIR = f"test_runs/beam_{BEAM_ID}"
+ARM_ID = 0
+RUN_DIR = f"test_runs/arm_{ARM_ID}"
 N_MODES = 3
-FIX_BOTH_ENDS = True  # If True, fix at x=0 and x=L; otherwise, only fix x=0
+FIX_BOTH_ENDS = True
 
 # You can run a mesh convergence study if you're unsure how fine the mesh needs to be
 ELEMENT_SIZE = 0.009 # meters; Element size for meshing the beam, smaller means finer precision
 AMPLITUDE = 0.5  # meters; Assumed modal amplitude for force estimation
 
-# Geometry (meters)
-LENGTH = 1.0
-WIDTH = 0.1
-HEIGHT = 0.07
+# Tube geometry
+LENGTH = 0.3
+OUTER_DIAMETER = 0.04
+INNER_DIAMETER = 0.03
 
-# Material: Steel
+# Material: soft silicone
 MATERIAL = {
-    "name": "steel",
-    "EX": 2e11,     # Young's modulus (Pa)
-    "PR": 0.3,      # Poisson's ratio
-    "DENS": 3000    # Density (kg/m^3)
+    "name": "silicone",
+    "EX": 1e6,    # Young's modulus (Pa)
+    "PR": 0.49,   # Poisson's ratio (nearly incompressible)
+    "DENS": 1100  # Density (kg/m^3)
 }
 
 # -------------------
@@ -90,15 +56,19 @@ if __name__ == "__main__":
         else:
             mesh_dir = None
         
-        create_beam(mapdl, length=LENGTH, width=WIDTH, height=HEIGHT,
-            element_size=ELEMENT_SIZE, material=MATERIAL, mesh_dir=mesh_dir,
-            fix_both_ends=FIX_BOTH_ENDS)
+        create_mckibben_tube(mapdl, length=LENGTH,
+                        outer_diameter=OUTER_DIAMETER,
+                        inner_diameter=INNER_DIAMETER,
+                        element_size=ELEMENT_SIZE,
+                        material=MATERIAL,
+                        mesh_dir=mesh_dir,
+                        fix_both_ends=FIX_BOTH_ENDS)
 
         frequencies, vtk_paths = run_modal_analysis(
             mapdl,
             n_modes=N_MODES,
             output_dir=f"{RUN_DIR}/mode_shapes",
-            base_filename=f"beam_{BEAM_ID}"
+            base_filename=f"arm_{ARM_ID}"
         )
 
         print("\n--- Simulation Results ---")

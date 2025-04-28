@@ -2,7 +2,10 @@
 Next up:
 - figure out how to parameterize the whole arm
 - new functions for beam_generator to generate new structures
-- 
+
+Add outer braided mesh simulation (for contraction behavior)
+Run modal analysis on this flexible tube
+Add internal pressure excitation (pneumatic inflation)
 
 - possibly look into pre-built ParaView .pvsm session file that opens a mode and sets all this up automatically?
 
