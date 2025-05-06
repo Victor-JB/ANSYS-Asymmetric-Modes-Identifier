@@ -21,6 +21,7 @@ PRESTRESS = True
 
 # You can run a mesh convergence study if you're unsure how fine the mesh needs to be
 ELEMENT_SIZE = 0.009 # meters; Element size for meshing the beam, smaller means finer precision
+N_THROUGH = 6  # Number of elements through the wall of the tube
 AMPLITUDE = 0.5  # meters; Assumed modal amplitude for force estimation
 
 # Tube geometry
@@ -61,7 +62,7 @@ if __name__ == "__main__":
         create_mckibben_tube(mapdl, length=LENGTH,
                         outer_diameter=OUTER_DIAMETER,
                         inner_diameter=INNER_DIAMETER,
-                        element_size=ELEMENT_SIZE,
+                        n_through=ELEMENT_SIZE,
                         material=MATERIAL,
                         mesh_dir=mesh_dir,
                         fix_both_ends=FIX_BOTH_ENDS)

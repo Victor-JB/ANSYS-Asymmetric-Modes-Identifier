@@ -6,7 +6,7 @@ Define Parametric Beam Geometry to use with other pyMAPDL analysis files
 
 # --------------------------------------------------------------------------- #
 # Updated: modeling a flexible McKibben-type arm instead of a beam
-def create_mckibben_tube(mapdl, length, outer_diameter, inner_diameter, element_size, material, mesh_dir=None, fix_both_ends=True):
+def create_mckibben_tube(mapdl, length, outer_diameter, inner_diameter, material, n_through=6, mesh_dir=None, fix_both_ends=True):
     """
     Create a soft robotic tube approximating a McKibben actuator outer bladder.
 
@@ -21,12 +21,14 @@ def create_mckibben_tube(mapdl, length, outer_diameter, inner_diameter, element_
         fix_both_ends: Whether to fix both ends or just one
     """
     print("Creating arm geometry...")
-    print(f"Length: {length}, Outer diam: {outer_diameter}, Inner diam: {inner_diameter}, Element Size: {element_size}")
+    print(f"Length: {length}, Outer diam: {outer_diameter}, Inner diam: {inner_diameter}, Number elements through wall: {n_through}")
     print("Material Properties: ")
     print(f"EX: {material['EX']}, PR: {material['PR']}, DENS: {material['DENS']}")
     print(f"Fix both ends: {fix_both_ends}")
     
     mapdl.clear()
+    # 1) make sure we’re in PREP7
+    mapdl.finish()
     mapdl.prep7()
 
     # Material
@@ -56,28 +58,38 @@ def create_mckibben_tube(mapdl, length, outer_diameter, inner_diameter, element_
     r_outer = outer_diameter / 2
     r_inner = inner_diameter / 2
 
-    # 1) define the four keypoints of the cross-section in the X-R plane
+    # 2) sketch the 2D cross-section in the X–R plane as an area
+    #    keypoints for inner radius
     mapdl.k(1, 0,        r_inner, 0)
-    mapdl.k(2, 0,        r_outer, 0)
+    mapdl.k(2, length,   r_inner, 0)
+    #    keypoints for outer radius
     mapdl.k(3, length,   r_outer, 0)
-    mapdl.k(4, length,   r_inner, 0)
+    mapdl.k(4, 0,        r_outer, 0)
+    
+    # create the four straight lines, two points at a time
+    l1 = mapdl.l(1, 4)   # line between KP1→KP4
+    l2 = mapdl.l(4, 3)   # line between KP4→KP3
+    l3 = mapdl.l(3, 2)   # line between KP3→KP2
+    l4 = mapdl.l(2, 1)   # line between KP2→KP1
 
-    # 2) create the 2D area
-    mapdl.a(1, 2, 3, 4)
+    # 3) build an area from those four lines
+    mapdl.al(l1, l2, l3, l4)
 
-    # 3) revolve that area about the X-axis by 360° into a volume
-    #    VROTAT, Asel, Ksel, Vpx, Vpy, Vpz, Angle
-    mapdl.asel("ALL")                          # select our area
-    mapdl.run("VROTAT,ALL,,1,0,0,360")          # axis vector (1,0,0), full circle
+    # 3) define axis of revolution via two keypoints
+    mapdl.k(10, 0, 0, 0)
+    mapdl.k(11, 1, 0, 0)
 
-    # wall thickness = r_outer − r_inner
+    # 1) make sure that area is in the active area select set
+    mapdl.run("ASEL,ALL")
+
+    # 2) revolve those selected areas about the line from KP10→KP11 through 360°
+    #    VROTAT, NA1, NA2, NA3, NA4, NA5, NA6, PAX1, PAX2, ARC
+    #    we only need NA1=ALL, leave NA2–NA6 blank, then PAX1=10,PAX2=11,ARC=360
+    mapdl.run("VROTAT,ALL,,,,,10,11,360")
+
+    # 5) mesh with ~n_through elements through the wall
     thickness = r_outer - r_inner
-
-    # target ~6 elements through thickness
-    n_through = 6       # explain logic for this number?
-    ese = thickness / n_through
-
-    # setting mesh size
+    ese       = thickness / float(n_through)
     mapdl.esize(ese)
     mapdl.vmesh("ALL")
 
