@@ -1,8 +1,12 @@
 
- SUBTRACT VOLUMES
+ ROTATE AREAS 
+        1,
+      ABOUT THE AXIS DEFINED BY COORDS 
+  0.78886E-30 0.78886E-30 0.78886E-30,  0.78886E-30 0.78886E-30 0.78886E-30,
+     DEGREE OF ARC=   360.00   NUMBER OF SEGMENTS=   4
 
  *** ERROR ***                           CP =       0.000   TIME= 00:00:00
- No volumes defined in VSBV command.  Command ignored.                   
+ Axis points are coincidental.                                           
 
 
  NUMBER OF WARNING MESSAGES ENCOUNTERED=          1

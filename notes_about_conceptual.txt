@@ -1,0 +1,25 @@
+3. Physical soundness of “pulsing” internal pressure to hit an asymmetric mode
+Symmetry of excitation
+A uniform internal pressure oscillation (purely radial, the same everywhere inside) 
+will primarily excite the breathing modes (circumferential expansion/contraction) and 
+the axial “bar” modes. By itself, it will not couple into a bending‐ or asymmetric mode unless:
+
+you have geometric asymmetry (e.g., braided mesh pattern, cutouts), or
+
+your boundary conditions break symmetry (one end fixed, the other free, slight pre‐bend).
+
+Prestress & mode splitting
+If you take the static inflated state and then do a prestress modal, the hoop tension raises 
+the breathing‐mode frequencies, and also shifts the bending modes. You could see mode‐splitting 
+(degenerate bending directions splitting apart) if your preload is asymmetric.
+
+Practical forcing
+To actively excite an asymmetric bending mode, you’d typically apply an off‐center internal jet, 
+or mount the actuator so that its inertial coupling is asymmetric. Pure uniform pressure pulses 
+tend to drive only the axisymmetric modes.
+
+Notes:
+- applying excitation symmetrically throughout a single muscle will not have it deform asymmetrically,
+just will excite breahting modes axisymmetrically
+- can apply off-axis pressure jet to have it deform and bend asymmetrically
+- perhaps feasability of exciting the arm itself to find modes is not ideal

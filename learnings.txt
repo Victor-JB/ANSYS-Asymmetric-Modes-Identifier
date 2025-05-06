@@ -15,22 +15,34 @@ It solves this eigenvalue problem:
 [K−ω 2M]
 ϕ=0
 Where:
-
-𝐾
 K is the stiffness matrix
-
-𝑀
 M is the mass matrix
-
-𝜔
 ω are natural frequencies
+𝜙, ϕ are the mode shapes
 
-𝜙
-ϕ are the mode shapes
+// ------------------------------------------------------------------------- //
+About different simulators:
+FEA (structural modal)
+If your only interest is the structural natural frequencies and mode shapes of the solid 
+McKibben bladder (treated as a linear or prestressed elastic body), then classical FEA in 
+ANSYS Mechanical / MAPDL is exactly the right tool. Once you’ve done your static inflation 
+step you can extract eigenmodes efficiently.
+
+CFD / Fluid–Structure Interaction
+If you need to capture the dynamics of the pressurizing fluid (e.g. wave propagation inside 
+the tube, fluid inertia, acoustic coupling) then you need a coupled FSI or at least an 
+acoustic–structural analysis. That is much heavier: you’d discretize the air volume, choose 
+an acoustic element, or else run a transient CFD + structural solve.
+
+Differentiable simulators
+If your end goal is “embed the physics inside a neural‐network training loop,” there are 
+emerging frameworks (e.g. JAX‐FEM, DiffTaichi) that let you backprop through FEA. Commercial 
+ANSYS isn’t differentiable out of the box. But if you just want to generate a large offline 
+dataset of mode shapes and frequencies, then train your own model, you don’t strictly need a 
+differentiable solver.
 
 
-
-
+// ------------------------------------------------------------------------- //
 The .vtk file created by mapdl.result.save_as_vtk(...) is an unstructured grid containing:
 
 📌 Nodal positions (the mesh)

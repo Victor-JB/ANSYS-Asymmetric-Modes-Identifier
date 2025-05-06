@@ -4,6 +4,7 @@
 Define Parametric Beam Geometry to use with other pyMAPDL analysis files
 """
 
+# --------------------------------------------------------------------------- #
 # Updated: modeling a flexible McKibben-type arm instead of a beam
 def create_mckibben_tube(mapdl, length, outer_diameter, inner_diameter, element_size, material, mesh_dir=None, fix_both_ends=True):
     """
@@ -29,40 +30,68 @@ def create_mckibben_tube(mapdl, length, outer_diameter, inner_diameter, element_
     mapdl.prep7()
 
     # Material
-    mapdl.mp("EX", 1, material["EX"])
-    mapdl.mp("PRXY", 1, material["PR"])
+    # mapdl.mp("EX", 1, material["EX"])
+    # mapdl.mp("PRXY", 1, material["PR"])
+
+    #q: how do I have whatever material setting here be the same as one I set in dict?
+    mapdl.tb("MOONEY", 1, "", 2)      # 2 Mooney terms
+    # term 1: C10, D1
+    mapdl.tbdata(1, 0.5, 0.02)         # example C10=0.5 MPa, D1=0.02
+    # term 2: C20, D2
+    mapdl.tbdata(2, 0.1, 0.01)         # example C20=0.1 MPa, D2=0.01
+
+    # turn on large‐deformation geometrical nonlinearity
+    mapdl.nlgeom("ON")
+    
     mapdl.mp("DENS", 1, material["DENS"])
 
+    """
+    Note: SOLID186 is a 3D 20-node structural solid element. It is used for modeling 3D structures with large deformations and nonlinear material behavior.
+    SOLID185 is a linear 8-node brick. For curved, hyperelastic bodies a 10-node tetra (SOLID186) often gives better accuracy in bending modes.
+    """
     # Element type
-    mapdl.et(1, "SOLID185")
+    mapdl.et(1, "SOLID186")
 
     # Geometrical parameters
     r_outer = outer_diameter / 2
     r_inner = inner_diameter / 2
 
-    # Create solid outer cylinder
-    mapdl.cyl4(0, 0, r_outer, length)
+    # 1) define the four keypoints of the cross-section in the X-R plane
+    mapdl.k(1, 0,        r_inner, 0)
+    mapdl.k(2, 0,        r_outer, 0)
+    mapdl.k(3, length,   r_outer, 0)
+    mapdl.k(4, length,   r_inner, 0)
 
-    # Create solid inner cylinder
-    mapdl.cyl4(0, 0, r_inner, length)
+    # 2) create the 2D area
+    mapdl.a(1, 2, 3, 4)
 
-    # Subtract inner cylinder from outer cylinder
-    mapdl.vsbv(1, 2)
+    # 3) revolve that area about the X-axis by 360° into a volume
+    #    VROTAT, Asel, Ksel, Vpx, Vpy, Vpz, Angle
+    mapdl.asel("ALL")                          # select our area
+    mapdl.run("VROTAT,ALL,,1,0,0,360")          # axis vector (1,0,0), full circle
 
-    # Mesh
-    mapdl.esize(element_size)
+    # wall thickness = r_outer − r_inner
+    thickness = r_outer - r_inner
+
+    # target ~6 elements through thickness
+    n_through = 6       # explain logic for this number?
+    ese = thickness / n_through
+
+    # setting mesh size
+    mapdl.esize(ese)
     mapdl.vmesh("ALL")
 
     # Boundary conditions
     if fix_both_ends:
-        mapdl.nsel("S", "LOC", "X", length)
+        # tol= defining float tolerance for floating point comparison
+        mapdl.nsel("S", "LOC", "X", length, tol=1e-6) 
         mapdl.d("ALL", "ALL")
     else:
         mapdl.nsel("S", "LOC", "X", 0)
         mapdl.d("ALL", "ALL")
 
     mapdl.allsel()
-    mapdl.finish()
+    mapdl.finish() # finish prep7
 
     print("Beam geometry created successfully!\n")
 
@@ -80,6 +109,7 @@ def create_mckibben_tube(mapdl, length, outer_diameter, inner_diameter, element_
 
     return mapdl
 
+# --------------------------------------------------------------------------- #
 def create_beam(mapdl, length, width, height, element_size, material, mesh_dir=None, fix_both_ends=False):
     print("Creating beam geometry...")
     print(f"Length: {length}, Width: {width}, Height: {height}, Element Size: {element_size}")
@@ -113,7 +143,6 @@ def create_beam(mapdl, length, width, height, element_size, material, mesh_dir=N
         mapdl.nsel("S", "LOC", "X", 0)
         mapdl.d("ALL", "ALL")
 
-    
     mapdl.allsel()
     mapdl.finish()
 

@@ -1,10 +1,10 @@
-# File: test_single_simulation.py
+# File: test_soft_arm.py
 
 import argparse
 import os
 from ansys.mapdl.core import launch_mapdl
 from beam_generator import create_mckibben_tube
-from modal_analysis import run_modal_analysis
+from modal_analysis import prestressed_analysis, cold_not_prestressed_analysis
 from symmetry_check import is_mode_asymmetric
 from force_estimator import estimate_force_from_vtk
 from reaction_force_analysis import apply_modal_bc_and_get_reaction_force
@@ -15,8 +15,9 @@ from reaction_force_analysis import apply_modal_bc_and_get_reaction_force
 
 ARM_ID = 0
 RUN_DIR = f"test_runs/arm_{ARM_ID}"
-N_MODES = 3
+N_MODES = 5
 FIX_BOTH_ENDS = True
+PRESTRESS = True
 
 # You can run a mesh convergence study if you're unsure how fine the mesh needs to be
 ELEMENT_SIZE = 0.009 # meters; Element size for meshing the beam, smaller means finer precision
@@ -26,6 +27,7 @@ AMPLITUDE = 0.5  # meters; Assumed modal amplitude for force estimation
 LENGTH = 0.3
 OUTER_DIAMETER = 0.04
 INNER_DIAMETER = 0.03
+PRESTRESS_PRESSURE = 0.1  # MPa; Pressure inside the tube for prestressed analysis
 
 # Material: soft silicone
 MATERIAL = {
@@ -64,12 +66,24 @@ if __name__ == "__main__":
                         mesh_dir=mesh_dir,
                         fix_both_ends=FIX_BOTH_ENDS)
 
-        frequencies, vtk_paths = run_modal_analysis(
-            mapdl,
-            n_modes=N_MODES,
-            output_dir=f"{RUN_DIR}/mode_shapes",
-            base_filename=f"arm_{ARM_ID}"
-        )
+        if PRESTRESS:
+            print("Running prestressed analysis...")
+            frequencies, vtk_paths = prestressed_analysis(
+                mapdl,
+                pressure=PRESTRESS_PRESSURE,
+                inner_diam=INNER_DIAMETER,
+                n_modes=N_MODES,
+                base_filename=f"arm_{ARM_ID}",
+                output_dir=f"{RUN_DIR}/mode_shapes",
+            )
+        else:
+            print("Running cold not prestressed analysis...")
+            frequencies, vtk_paths = cold_not_prestressed_analysis(
+                mapdl,
+                n_modes=N_MODES,
+                output_dir=f"{RUN_DIR}/mode_shapes",
+                base_filename=f"arm_{ARM_ID}"
+            )
 
         print("\n--- Simulation Results ---")
         for mode_idx, (freq, vtk_file) in enumerate(zip(frequencies, vtk_paths), 1):

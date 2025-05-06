@@ -116,7 +116,7 @@
  PORT                              50052.0000                    SCALAR
 
  RELEASE= 2025 R1              BUILD= 25.1      UP20241202   VERSION=WINDOWS x64 
- CURRENT JOBNAME=file  17:29:38  APR 27, 2025 CP=      0.109
+ CURRENT JOBNAME=file  10:35:43  MAY 06, 2025 CP=      0.047
 
      1  FINISH 
 
@@ -193,6 +193,25 @@
 
  /OUTPUT FILE=         
 
+ /OUTPUT FILE=         
+
+ /OUTPUT FILE=         
+
+ /OUTPUT FILE=         
+
+ /OUTPUT FILE=         
+
+ /OUTPUT FILE=         
+
+ PARAMETER __TMPVAR__ =     1.000000000    
+
+ /OUTPUT FILE=         
+
+ VECTOR GET OPERATION  _MYVGET_  VECTOR LENGTH=       1
+ NAME= AREA         0  ALIS      
+
+ /OUTPUT FILE=         
+
 
  NUMBER OF WARNING MESSAGES ENCOUNTERED=          1
  NUMBER OF ERROR   MESSAGES ENCOUNTERED=          1
@@ -221,7 +240,7 @@
  |                                                                             |
  |-----------------------------------------------------------------------------|
  |                                                                             |
- |        CP Time      (sec) =          0.734       Time  =  17:29:39          |
- |        Elapsed Time (sec) =          3.000       Date  =  04/27/2025        |
+ |        CP Time      (sec) =          0.453       Time  =  10:35:44          |
+ |        Elapsed Time (sec) =          3.000       Date  =  05/06/2025        |
  |                                                                             |
  *-----------------------------------------------------------------------------*

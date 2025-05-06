@@ -1,7 +1,13 @@
+Terminology:
+"the physics of “pulsing” a McKibben from the inside to drive an asymmetric mode."
+
 
 Next up:
 - figure out how to parameterize the whole arm
 - new functions for beam_generator to generate new structures
+
+For the material:
+1. Adjust the tbdata values to match your actual silicone test data.
 
 Add outer braided mesh simulation (for contraction behavior)
 Run modal analysis on this flexible tube

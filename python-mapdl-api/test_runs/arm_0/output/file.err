@@ -1,8 +1,8 @@
-/COM,ANSYS RELEASE 2025 R1           BUILD 25.1      UP20241202       17:29:37
+/COM,ANSYS RELEASE 2025 R1           BUILD 25.1      UP20241202       10:35:42
 
  *** WARNING ***                         CP =       0.000   TIME= 00:00:00
  The geometry is not available.  Issue the RESUME command to restore the 
  database.  The NUMVAR command is ignored.                               
 
  *** ERROR ***                           CP =       0.000   TIME= 00:00:00
- No volumes defined in VSBV command.  Command ignored.                   
+ Axis points are coincidental.                                           
