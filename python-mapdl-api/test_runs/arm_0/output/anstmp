@@ -1,18 +1,10 @@
 
- ROTATE AREAS 
-        1,
-      ABOUT THE AXIS DEFINED BY KEYPOINTS     11   360
-     DEGREES OF ARC=   360.00   NUMBER OF SEGMENTS=   4
-
  *** ERROR ***                           CP =       0.000   TIME= 00:00:00
- Keypoint 360 not defined.                                               
-
- *** ERROR ***                           CP =       0.000   TIME= 00:00:00
- Keypoint 360 not defined.                                               
+ Undefined area 0.                                                       
 
 
  NUMBER OF WARNING MESSAGES ENCOUNTERED=          1
- NUMBER OF ERROR   MESSAGES ENCOUNTERED=          2
+ NUMBER OF ERROR   MESSAGES ENCOUNTERED=          1
 
 
 

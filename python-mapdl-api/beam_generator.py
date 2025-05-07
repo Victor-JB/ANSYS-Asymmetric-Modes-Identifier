@@ -72,20 +72,18 @@ def create_mckibben_tube(mapdl, length, outer_diameter, inner_diameter, material
     l3 = mapdl.l(3, 2)   # line between KP3→KP2
     l4 = mapdl.l(2, 1)   # line between KP2→KP1
 
-    # 3) build an area from those four lines
-    mapdl.al(l1, l2, l3, l4)
+    # 1) Build your cross-sectional area and capture its ID
+    anum = mapdl.al(l1, l2, l3, l4)
+    print(f"Created area {anum}")
 
-    # 3) define axis of revolution via two keypoints
-    mapdl.k(10, 0, 0, 0)
-    mapdl.k(11, 1, 0, 0)
+    # 2) Select *that* area explicitly
+    #    ASEL, S, AREA, , <start>, <end>
+    mapdl.run(f"ASEL,S,AREA,,{anum},{anum}")
 
-    # 1) make sure that area is in the active area select set
-    mapdl.run("ASEL,ALL")
-
-    # 2) revolve those selected areas about the line from KP10→KP11 through 360°
-    #    VROTAT, NA1, NA2, NA3, NA4, NA5, NA6, PAX1, PAX2, ARC
-    #    we only need NA1=ALL, leave NA2–NA6 blank, then PAX1=10,PAX2=11,ARC=360
-    mapdl.run("VROTAT,ALL,,,,,10,11,360")
+    # 3) Now revolve *selected* areas about KP10→KP11 through 360°
+    #    - the first six fields (area IDs) are left blank so MAPDL uses the selection
+    #    - field 7 = PAX1 (keypoint 10), field 8 = PAX2 (keypoint 11), field 9 = ARC
+    mapdl.run("VROTAT,,,,,,10,11,360")                                                      
 
     # 5) mesh with ~n_through elements through the wall
     thickness = r_outer - r_inner
