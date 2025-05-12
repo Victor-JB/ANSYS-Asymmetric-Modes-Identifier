@@ -1,6 +1,15 @@
 
+ GENERATE NODES AND ELEMENTS   IN  ALL  SELECTED VOLUMES  
+
+ *** NOTE ***                            CP =       0.000   TIME= 00:00:00
+ Mapped brick meshing is not possible in volume 1 because area 1 has     
+ internal cutouts.                                                       
+
  *** ERROR ***                           CP =       0.000   TIME= 00:00:00
- Undefined area 0.                                                       
+ Volume 1 has invalid topology for mapped brick meshing.                 
+
+ *** NOTE ***                            CP =       0.000   TIME= 00:00:00
+ No volumes were meshed by the VMESH operation.                          
 
 
  NUMBER OF WARNING MESSAGES ENCOUNTERED=          1

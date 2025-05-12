@@ -58,33 +58,8 @@ def create_mckibben_tube(mapdl, length, outer_diameter, inner_diameter, material
     r_outer = outer_diameter / 2
     r_inner = inner_diameter / 2
 
-    # 2) sketch the 2D cross-section in the X–R plane as an area
-    #    keypoints for inner radius
-    mapdl.k(1, 0,        r_inner, 0)
-    mapdl.k(2, length,   r_inner, 0)
-    #    keypoints for outer radius
-    mapdl.k(3, length,   r_outer, 0)
-    mapdl.k(4, 0,        r_outer, 0)
-    
-    # create the four straight lines, two points at a time
-    l1 = mapdl.l(1, 4)   # line between KP1→KP4
-    l2 = mapdl.l(4, 3)   # line between KP4→KP3
-    l3 = mapdl.l(3, 2)   # line between KP3→KP2
-    l4 = mapdl.l(2, 1)   # line between KP2→KP1
-
-    # 1) Build your cross-sectional area and capture its ID
-    anum = mapdl.al(l1, l2, l3, l4)
-    print(f"Created area {anum}")
-
-    # 2) Select *that* area explicitly
-    #    ASEL, S, AREA, , <start>, <end>
-    mapdl.run(f"ASEL,S,AREA,,{anum},{anum}")
-
-    # 3) Now revolve *selected* areas about KP10→KP11 through 360°
-    #    - the first six fields (area IDs) are left blank so MAPDL uses the selection
-    #    - field 7 = PAX1 (keypoint 10), field 8 = PAX2 (keypoint 11), field 9 = ARC
-    mapdl.run("VROTAT,,,,,,10,11,360")                                                      
-
+    # 2) create a cylinder with outer radius r_outer and inner radius r_inner
+    mapdl.cylind(r_inner, r_outer, z1=0, z2=length)
     # 5) mesh with ~n_through elements through the wall
     thickness = r_outer - r_inner
     ese       = thickness / float(n_through)

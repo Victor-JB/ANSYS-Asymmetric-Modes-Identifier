@@ -3,7 +3,7 @@ Terminology:
 
 
 Next up:
-- figure out how to parameterize the whole arm
+- figure out how to parameterize the whole arm -- a cylinder
 - new functions for beam_generator to generate new structures
 
 For the material:
