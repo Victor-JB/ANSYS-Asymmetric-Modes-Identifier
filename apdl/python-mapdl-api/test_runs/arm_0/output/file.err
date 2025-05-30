@@ -1,0 +1,33 @@
+/COM,ANSYS RELEASE 2025 R1           BUILD 25.1      UP20241202       14:27:17
+
+ *** WARNING ***                         CP =       0.000   TIME= 00:00:00
+ The geometry is not available.  Issue the RESUME command to restore the 
+ database.  The NUMVAR command is ignored.                               
+
+ *** WARNING ***                         CP =       0.000   TIME= 00:00:00
+ For item= LOC the component ( R ) is invalid.                           
+  The LSEL command is ignored.                                           
+/COM,ANSYS RELEASE 2025 R1           BUILD 25.1      UP20241202       13:58:32
+
+ *** WARNING ***                         CP =       0.656   TIME= 13:58:35
+ The geometry is not available.  Issue the RESUME command to restore the 
+ database.  The NUMVAR command is ignored.                               
+
+ *** WARNING ***                         CP =       0.656   TIME= 13:58:35
+ Altering the abort level key is not recommended.                        
+
+ *** WARNING ***                         CP =       1.031   TIME= 13:58:35
+ For item= LOC the component ( R ) is invalid.                           
+  The LSEL command is ignored.                                           
+/COM,ANSYS RELEASE 2025 R1           BUILD 25.1      UP20241202       15:30:20
+
+ *** WARNING ***                         CP =       0.578   TIME= 15:30:22
+ The geometry is not available.  Issue the RESUME command to restore the 
+ database.  The NUMVAR command is ignored.                               
+
+ *** WARNING ***                         CP =       0.609   TIME= 15:30:22
+ Altering the abort level key is not recommended.                        
+
+ *** WARNING ***                         CP =       0.953   TIME= 15:30:22
+ For item= LOC the component ( R ) is invalid.                           
+  The LSEL command is ignored.                                           

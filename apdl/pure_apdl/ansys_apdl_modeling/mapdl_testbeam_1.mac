@@ -1,0 +1,31 @@
+/FILNAME, beam_modal, 1
+/PREP7
+
+MP, EX, 1, 2.0e11
+MP, PRXY, 1, 0.3
+MP, DENS, 1, 7850
+
+ET, 1, SOLID185
+BLC4, 0, 0, 1, 0.05, 0.05
+ESIZE, 0.05
+VMESH, ALL
+
+D, 1, ALL
+
+/SOLU
+ANTYPE, 2
+MODOPT, LANB, 6
+MXPAND, 6
+SOLVE
+FINISH
+
+/POST1
+*DO, i, 1, 6
+  SET, i
+  *GET, FREQ, MODE, 0, FREQ
+  /OUTPUT, freq_output, txt, , APPEND
+  *VWRITE, i, FREQ
+  (F6, ' Hz: ', E12.5)
+*ENDDO
+/OUTPUT
+FINISH

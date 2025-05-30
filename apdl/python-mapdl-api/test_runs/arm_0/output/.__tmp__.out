@@ -1,0 +1,328 @@
+ Beta activation of the GRPC server.
+
+ Ansys Mechanical Enterprise Academic Student      
+
+
+ *------------------------------------------------------------------*
+ |                                                                  |
+ |   W E L C O M E   T O   T H E   A N S Y S (R)  P R O G R A M     |
+ |                                                                  |
+ *------------------------------------------------------------------*
+
+
+
+
+ ***************************************************************
+ *         ANSYS MAPDL 2025 R1          LEGAL NOTICES          *
+ ***************************************************************
+ *                                                             *
+ * Copyright 1971-2025 Ansys, Inc.  All rights reserved.       *
+ * Unauthorized use, distribution or duplication is            *
+ * prohibited.                                                 *
+ *                                                             *
+ * Ansys is a registered trademark of Ansys, Inc. or its       *
+ * subsidiaries in the United States or other countries.       *
+ * See the Ansys, Inc. online documentation or the Ansys, Inc. *
+ * documentation CD or online help for the complete Legal      *
+ * Notice.                                                     *
+ *                                                             *
+ ***************************************************************
+ *                                                             *
+ * THIS ANSYS SOFTWARE PRODUCT AND PROGRAM DOCUMENTATION       *
+ * INCLUDE TRADE SECRETS AND CONFIDENTIAL AND PROPRIETARY      *
+ * PRODUCTS OF ANSYS, INC., ITS SUBSIDIARIES, OR LICENSORS.    *
+ * The software products and documentation are furnished by    *
+ * Ansys, Inc. or its subsidiaries under a software license    *
+ * agreement that contains provisions concerning               *
+ * non-disclosure, copying, length and nature of use,          *
+ * compliance with exporting laws, warranties, disclaimers,    *
+ * limitations of liability, and remedies, and other           *
+ * provisions.  The software products and documentation may be *
+ * used, disclosed, transferred, or copied only in accordance  *
+ * with the terms and conditions of that software license      *
+ * agreement.                                                  *
+ *                                                             *
+ * Ansys, Inc. is a UL registered                              *
+ * ISO 9001:2015 company.                                      *
+ *                                                             *
+ ***************************************************************
+ *                                                             *
+ * This product is subject to U.S. laws governing export and   *
+ * re-export.                                                  *
+ *                                                             *
+ * For U.S. Government users, except as specifically granted   *
+ * by the Ansys, Inc. software license agreement, the use,     *
+ * duplication, or disclosure by the United States Government  *
+ * is subject to restrictions stated in the Ansys, Inc.        *
+ * software license agreement and FAR 12.212 (for non-DOD      *
+ * licenses).                                                  *
+ *                                                             *
+ ***************************************************************
+
+ 2025 R1 
+     
+ Point Releases and Patches installed:   
+     
+ Ansys Service Pack 2025 R1.23065720 
+ Discovery (full install) 2025 R1.23065720   
+ Core WB Files 2025 R1.23065720  
+ Ansys Dynamic Reporting 2025 R1.23065720
+ CFX (includes CFD-Post) 2025 R1.23065720
+ Chemkin 2025 R1.23065720
+ EnSight 2025 R1.23065720
+ FENSAP-ICE 2025 R1.23065720 
+ Fluent (includes CFD-Post) 2025 R1.23065720 
+ Polyflow (includes CFD-Post) 2025 R1.23065720   
+ Forte (includes EnSight) 2025 R1.23065720   
+ Rocky 2025 R1.23065720  
+ TurboGrid 2025 R1.23065720  
+ ACIS Geometry Interface 2025 R1.23065720
+ AutoCAD Geometry Interface 2025 R1.23065720 
+ Catia, Version 4 Geometry Interface 2025 R1.23065720
+ Catia, Version 5 Geometry Interface 2025 R1.23065720
+ Catia, Version 6 Geometry Interface 2025 R1.23065720
+ Creo Elements/Direct Modeling Geometry Interface 2025 R1.23065720   
+ Creo Parametric Geometry Interface 2025 R1.23065720 
+ Inventor Geometry Interface 2025 R1.23065720
+ JTOpen Geometry Interface 2025 R1.23065720  
+ NX Geometry Interface 2025 R1.23065720  
+ Parasolid Geometry Interface  2025 R1.23065720  
+ Solid Edge Geometry Interface 2025 R1.23065720  
+ SOLIDWORKS Geometry Interface 2025 R1.23065720  
+ Speos 2025 R1.23065720  
+ SpaceClaim 2025 R1.23065720 
+ Speos RPC 2025 R1.23065720  
+ Aqwa 2025 R1.23065720   
+ Autodyn 2025 R1.23065720
+ Material Calibration App 2025 R1.23065720   
+ Mechanical Products 2025 R1.23065720
+ Motion 2025 R1.23065720 
+ Academic Student 2025 R1.23065720   
+
+
+          *****  MAPDL COMMAND LINE ARGUMENTS  *****
+  INITIAL JOBNAME              = file                                                                                                                                                                                                                                                    
+  BATCH MODE REQUESTED (-b)    = LIST
+  INPUT FILE COPY MODE (-c)    = COPY
+  SHARED MEMORY PARALLEL REQUESTED
+    SINGLE PROCESS WITH   2 THREADS REQUESTED
+    TOTAL OF     2 CORES REQUESTED
+  INPUT FILE NAME              = C:\Users\Student\Desktop\ANSYS-Asymmetric-Modes-Identifier\python-mapdl-api\test_runs\arm_0\output\.__tmp__.inp
+  OUTPUT FILE NAME             = C:\Users\Student\Desktop\ANSYS-Asymmetric-Modes-Identifier\python-mapdl-api\test_runs\arm_0\output\.__tmp__.out
+
+ PARAMETER STATUS-           (   1 PARAMETERS DEFINED)
+
+ NAME                              VALUE                        TYPE
+ PORT                              50052.0000                    SCALAR
+
+ RELEASE= 2025 R1              BUILD= 25.1      UP20241202   VERSION=WINDOWS x64 
+ CURRENT JOBNAME=file  15:30:21  MAY 23, 2025 CP=      0.219
+
+     1  FINISH 
+
+ RUN SETUP PROCEDURE FROM FILE= C:\Program Files\ANSYS Inc\ANSYS Student\v251\ANSYS\apdl\start.ans
+ Start GRPC Server
+
+ ##############################
+ ### START GRPC SERVER      ###
+ ##############################
+
+ Server Executable   : MapdlGrpc.Server
+ Server listening on : 0.0.0.0:50052
+
+ /OUTPUT FILE= anstmp
+
+ /OUTPUT FILE= anstmp
+
+ *** MAPDL - ENGINEERING ANALYSIS SYSTEM  RELEASE 2025 R1          25.1     ***
+ Ansys Mechanical Enterprise Academic Student      
+ 01055371  VERSION=WINDOWS x64   15:30:22  MAY 23, 2025 CP=      0.578
+
+                                                                               
+
+
+
+
+          ***** TIME-HISTORY POSTPROCESSOR (POST26) *****
+
+ ALL POST26 SPECIFICATIONS ARE RESET TO INITIAL DEFAULTS
+
+ *** NOTE ***                            CP =       0.578   TIME= 15:30:22
+ Geometry is not available.  Issue RESUME to restore database.           
+
+ *** NOTE ***                            CP =       0.578   TIME= 15:30:22
+ Unable to open default results file file.rst                            
+  Use FILE command to open a results file.                               
+
+ *** WARNING ***                         CP =       0.578   TIME= 15:30:22
+ The geometry is not available.  Issue the RESUME command to restore the 
+ database.  The NUMVAR command is ignored.                               
+
+
+ ***** ROUTINE COMPLETED *****  CP =         0.578
+
+
+
+ /OUTPUT FILE= anstmp
+
+ /OUTPUT FILE= anstmp
+
+ *** WARNING ***                         CP =       0.609   TIME= 15:30:22
+ Altering the abort level key is not recommended.                        
+
+
+ NUMBER OF DISPLAYED ERRORS ALLOWED PER COMMAND=                200
+ NUMBER OF ERRORS ALLOWED PER COMMAND BEFORE ANSYS ABORT=     10000
+ ABORT LEVEL KEY= -1
+ ALL ERRORS WRITTEN TO C:\Users\Student\Desktop\ANSYS-Asymmetric-Modes-Identifier\python-mapdl-api\test_runs\arm_0\output\file.err                                                                                                                                                         
+ DO NOT TERMINATE /INPUT UPON FIRST ERROR
+
+ /OUTPUT FILE= anstmp
+
+ /OUTPUT FILE= anstmp
+
+ /OUTPUT FILE= anstmp
+
+ /OUTPUT FILE= anstmp
+
+ CLEAR MAPDL DATABASE AND RESTART
+
+ Ansys Mechanical Enterprise Academic Student      
+
+ /OUTPUT FILE= anstmp
+
+ /OUTPUT FILE= anstmp
+
+ /OUTPUT FILE= anstmp
+
+ /OUTPUT FILE= anstmp
+
+ /OUTPUT FILE= anstmp
+
+ /OUTPUT FILE= anstmp
+
+ /OUTPUT FILE= anstmp
+
+ /OUTPUT FILE= anstmp
+
+ /OUTPUT FILE= anstmp
+
+ /OUTPUT FILE= anstmp
+
+ /OUTPUT FILE= anstmp
+
+ /OUTPUT FILE= anstmp
+
+ /OUTPUT FILE= anstmp
+
+ /OUTPUT FILE= anstmp
+
+ PARAMETER __TMPVAR__ =     1.000000000    
+
+ /OUTPUT FILE= anstmp
+
+ VECTOR GET OPERATION  _MYVGET_  VECTOR LENGTH=      20
+ NAME= LINE         0  LLIS      
+
+ PARAMETER __TMPVAR__ =     1.000000000    
+
+ /OUTPUT FILE= anstmp
+
+ /OUTPUT FILE= anstmp
+
+ /OUTPUT FILE= anstmp
+
+ /OUTPUT FILE= anstmp
+
+ /OUTPUT FILE= anstmp
+
+ /OUTPUT FILE= anstmp
+
+ CLEAR MAPDL DATABASE AND RESTART
+
+ Ansys Mechanical Enterprise Academic Student      
+
+ /OUTPUT FILE= anstmp
+
+ /OUTPUT FILE= anstmp
+
+ /OUTPUT FILE= anstmp
+
+ EXIT MAPDL WHILE IN SERVER MODE
+
+ SAVE ALL MODEL, SOLUTION AND POST DATA
+
+ ALL CURRENT MAPDL DATA WRITTEN TO FILE NAME= file.db
+  FOR POSSIBLE RESUME FROM THIS POINT
+
+
+ NUMBER OF WARNING MESSAGES ENCOUNTERED=          3
+ NUMBER OF ERROR   MESSAGES ENCOUNTERED=          0
+
++--------------------- M A P D L   S T A T I S T I C S ------------------------+
+
+Release: 2025 R1            Build: 25.1       Update: UP20241202   Platform: WINDOWS x64 
+Date Run: 05/23/2025   Time: 15:30     Process ID: 28468
+Operating System: Windows 10  (Build: 19045)
+
+Processor Model: AMD Ryzen 7 5700U with Radeon Graphics
+
+Compiler: Intel(R) Fortran Compiler Classic Version 2021.9  (Build: 20230302)
+          Intel(R) C/C++ Compiler Classic Version 2021.9  (Build: 20230302)
+          AOCL-BLAS 4.2.1 Build 20240528
+
+Number of machines requested            :    1
+Total number of cores available         :   16
+Number of physical cores available      :    8
+Number of processes requested           :    1
+Number of threads per process requested :    2
+Total number of cores requested         :    2 (Shared Memory Parallel)                    
+
+GPU Acceleration: Not Requested
+
+Job Name: file
+Input File: .__tmp__.inp
+Working Directory: C:\Users\Student\Desktop\ANSYS-Asymmetric-Modes-Identifier\python-mapdl-api\test_runs\arm_0\output
+
+Total CPU time for main thread                    :        0.7 seconds
+Total CPU time summed for all threads             :        1.3 seconds
+
+Elapsed time spent obtaining a license            :        1.4 seconds
+Elapsed time spent pre-processing model (/PREP7)  :        0.1 seconds
+Elapsed time spent solution - preprocessing       :        0.0 seconds
+Elapsed time spent computing solution             :        0.0 seconds
+Elapsed time spent solution - postprocessing      :        0.0 seconds
+Elapsed time spent post-processing model (/POST1) :        0.0 seconds
+Elapsed time spent post-processing model (/POST26):        0.0 seconds
+ 
+
+Sum of disk space used on all processes           :        0.0 MB
+
+Sum of memory used on all processes               :        9.0 MB
+Sum of memory allocated on all processes          :     2304.0 MB
+Physical memory available                         :         39 GB
+Total amount of I/O written to disk               :        0.0 GB
+Total amount of I/O read from disk                :        0.0 GB
+
++------------------ E N D   M A P D L   S T A T I S T I C S -------------------+
+
+
+ *-----------------------------------------------------------------------------*
+ |                                                                             |
+ |                               RUN COMPLETED                                 |
+ |                                                                             |
+ |-----------------------------------------------------------------------------|
+ |                                                                             |
+ |  Ansys MAPDL 2025 R1         Build 25.1         UP20241202    WINDOWS x64   |
+ |                                                                             |
+ |-----------------------------------------------------------------------------|
+ |                                                                             |
+ |  Database Requested(-db)  1024 MB     Scratch Memory Requested      1024 MB |
+ |  Maximum Database Used       1 MB     Maximum Scratch Memory Used      8 MB |
+ |                                                                             |
+ |-----------------------------------------------------------------------------|
+ |                                                                             |
+ |        CP Time      (sec) =          1.281       Time  =  15:30:24          |
+ |        Elapsed Time (sec) =          5.000       Date  =  05/23/2025        |
+ |                                                                             |
+ *-----------------------------------------------------------------------------*

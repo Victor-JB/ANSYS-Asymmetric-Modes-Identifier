@@ -1,1 +1,0 @@
-pymapdl stop --all // stop all pymapdl processes

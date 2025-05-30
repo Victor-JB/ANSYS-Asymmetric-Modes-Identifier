@@ -1,9 +1,29 @@
 Terminology:
 "the physics of “pulsing” a McKibben from the inside to drive an asymmetric mode."
 
+More and better parameterization – different materials, splines / shapes of the beam, parameterizing segments of a beam so that segments are different materials, etc.
+Possibly create script to determine reaction force of the simulated beam; i.e., how much force the vibration of the beam could generate, and use that as a parameter for the NN model down the line
+Create the dataset
+Run the simulations
+Start testing neural network structures (tensorflow or pytorch) to generate beam parameters given a desired asymmetric mode
+
+Parameterize for soft materials — dragon skin or other such materials
+Why do they need to be soft? Why does the vibration material need to be soft?
+Make it out of soft materials to have the entire arm vibrate
+Make heterogeneous structure
+We are trying to get the arm to vibrate
+Parameterize with splines + different materials, most important right now
+Simulation time analysis, optimize and multithread for all of this
+Discussed how it becomes a nonlinear optimization problem that we’re using Ansys for?
+Parameterize the output of asymmetric modes once generated, use that format as the input to the neural net for it to find the structure
+How do I define my own cost function? I don’t think I need to more 
+
+Idea:
+1. gui where I draw an asymmetric resonance mode, and the model outputs the parameters for it
 
 Next up:
 - figure out how to parameterize the whole arm -- a cylinder
+- make it different parameterizations -- splines and other things
 - new functions for beam_generator to generate new structures
 
 For the material:

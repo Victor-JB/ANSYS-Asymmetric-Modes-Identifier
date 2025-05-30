@@ -1,0 +1,7 @@
+Mode 1 frequency:  0.37073E+02
+
+ OPENED FILE= freq_raw.txt FOR COMMAND FILE DATA 
+
+
+  COMMAND FILE CLOSED 
+

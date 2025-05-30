@@ -20,6 +20,6 @@ tend to drive only the axisymmetric modes.
 
 Notes:
 - applying excitation symmetrically throughout a single muscle will not have it deform asymmetrically,
-just will excite breahting modes axisymmetrically
+just will excite breathing modes axisymmetrically
 - can apply off-axis pressure jet to have it deform and bend asymmetrically
 - perhaps feasability of exciting the arm itself to find modes is not ideal

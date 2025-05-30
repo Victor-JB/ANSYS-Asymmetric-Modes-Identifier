@@ -1,0 +1,177 @@
+/COM,ANSYS RELEASE 2025 R1           BUILD 25.1      UP20241202       01:56:32
+
+ *** WARNING ***                         CP =       4.062   TIME= 02:00:17
+ /FILNAME is not a recognized PREP7 command, abbreviation, or macro.     
+  This command will be ignored.                                          
+
+ *** ERROR ***                           CP =       7.469   TIME= 02:00:20
+ The substep (MODE) number must be specified on the SET command for      
+ buckling (ANTYPE=1) or modal (ANTYPE=2) analysis.                       
+
+ *** ERROR ***                           CP =       8.969   TIME= 02:10:11
+ The substep (MODE) number must be specified on the SET command for      
+ buckling (ANTYPE=1) or modal (ANTYPE=2) analysis.                       
+
+ *** WARNING ***                         CP =       9.062   TIME= 02:10:13
+ Data output error, probably bad FORMAT                                  
+  (F6, ' Hz: ', E12.5).                                                  
+
+ *** ERROR ***                           CP =       9.094   TIME= 02:10:13
+ The substep (MODE) number must be specified on the SET command for      
+ buckling (ANTYPE=1) or modal (ANTYPE=2) analysis.                       
+
+ *** WARNING ***                         CP =       9.156   TIME= 02:10:14
+ Data output error, probably bad FORMAT                                  
+  (F6, ' Hz: ', E12.5).                                                  
+
+ *** ERROR ***                           CP =       9.156   TIME= 02:10:14
+ The substep (MODE) number must be specified on the SET command for      
+ buckling (ANTYPE=1) or modal (ANTYPE=2) analysis.                       
+
+ *** WARNING ***                         CP =       9.203   TIME= 02:10:15
+ Data output error, probably bad FORMAT                                  
+  (F6, ' Hz: ', E12.5).                                                  
+
+ *** ERROR ***                           CP =       9.203   TIME= 02:10:15
+ The substep (MODE) number must be specified on the SET command for      
+ buckling (ANTYPE=1) or modal (ANTYPE=2) analysis.                       
+
+ *** WARNING ***                         CP =       9.266   TIME= 02:10:15
+ Data output error, probably bad FORMAT                                  
+  (F6, ' Hz: ', E12.5).                                                  
+
+ *** ERROR ***                           CP =       9.297   TIME= 02:10:15
+ The substep (MODE) number must be specified on the SET command for      
+ buckling (ANTYPE=1) or modal (ANTYPE=2) analysis.                       
+
+ *** WARNING ***                         CP =       9.344   TIME= 02:10:16
+ Data output error, probably bad FORMAT                                  
+  (F6, ' Hz: ', E12.5).                                                  
+
+ *** ERROR ***                           CP =       9.344   TIME= 02:10:16
+ The substep (MODE) number must be specified on the SET command for      
+ buckling (ANTYPE=1) or modal (ANTYPE=2) analysis.                       
+
+ *** WARNING ***                         CP =       9.375   TIME= 02:10:16
+ Data output error, probably bad FORMAT                                  
+  (F6, ' Hz: ', E12.5).                                                  
+/COM,ANSYS RELEASE 2025 R1           BUILD 25.1      UP20241202       02:10:42
+
+ *** WARNING ***                         CP =      10.312   TIME= 02:10:42
+ Poisson's ratio NU set for material 1 deleted.                          
+
+ *** ERROR ***                           CP =      11.938   TIME= 02:10:42
+ The substep (MODE) number must be specified on the SET command for      
+ buckling (ANTYPE=1) or modal (ANTYPE=2) analysis.                       
+
+ *** ERROR ***                           CP =      12.891   TIME= 02:13:50
+ Element type 1 is not the same shape as SHELL181.  Switching to a       
+ different shape is not allowed while elements of type 1 exist.          
+
+ *** WARNING ***                         CP =      13.969   TIME= 02:16:07
+ /FILNAME is not a recognized PREP7 command, abbreviation, or macro.     
+  This command will be ignored.                                          
+
+ *** WARNING ***                         CP =      13.984   TIME= 02:16:07
+ Poisson's ratio NU set for material 1 deleted.                          
+
+ *** ERROR ***                           CP =      16.859   TIME= 02:16:09
+ The substep (MODE) number must be specified on the SET command for      
+ buckling (ANTYPE=1) or modal (ANTYPE=2) analysis.                       
+
+ *** WARNING ***                         CP =      17.859   TIME= 02:18:18
+ /FILNAME is not a recognized POST1 command, abbreviation, or macro.     
+  This command will be ignored.                                          
+
+ *** WARNING ***                         CP =      17.875   TIME= 02:18:18
+ Poisson's ratio NU set for material 1 deleted.                          
+
+ *** ERROR ***                           CP =      20.641   TIME= 02:18:19
+ The substep (MODE) number must be specified on the SET command for      
+ buckling (ANTYPE=1) or modal (ANTYPE=2) analysis.                       
+
+ *** WARNING ***                         CP =      21.812   TIME= 02:19:05
+ /FILNAME is not a recognized POST1 command, abbreviation, or macro.     
+  This command will be ignored.                                          
+
+ *** WARNING ***                         CP =      21.844   TIME= 02:19:05
+ Poisson's ratio NU set for material 1 deleted.                          
+
+ *** ERROR ***                           CP =      24.422   TIME= 02:19:06
+ The substep (MODE) number must be specified on the SET command for      
+ buckling (ANTYPE=1) or modal (ANTYPE=2) analysis.                       
+
+ *** WARNING ***                         CP =      25.297   TIME= 02:20:55
+ /FILNAME is not a recognized POST1 command, abbreviation, or macro.     
+  This command will be ignored.                                          
+
+ *** WARNING ***                         CP =      25.344   TIME= 02:20:55
+ Poisson's ratio NU set for material 1 deleted.                          
+
+ *** ERROR ***                           CP =      28.016   TIME= 02:20:56
+ The substep (MODE) number must be specified on the SET command for      
+ buckling (ANTYPE=1) or modal (ANTYPE=2) analysis.                       
+
+ *** WARNING ***                         CP =      29.422   TIME= 02:24:14
+ /FILNAME is not a recognized POST1 command, abbreviation, or macro.     
+  This command will be ignored.                                          
+
+ *** WARNING ***                         CP =      29.438   TIME= 02:24:14
+ Poisson's ratio NU set for material 1 deleted.                          
+
+ *** ERROR ***                           CP =      32.250   TIME= 02:24:15
+ The substep (MODE) number must be specified on the SET command for      
+ buckling (ANTYPE=1) or modal (ANTYPE=2) analysis.                       
+
+ *** WARNING ***                         CP =      33.359   TIME= 02:25:29
+ /FILNAME is not a recognized POST1 command, abbreviation, or macro.     
+  This command will be ignored.                                          
+
+ *** WARNING ***                         CP =      33.359   TIME= 02:25:30
+ Poisson's ratio NU set for material 1 deleted.                          
+
+ *** ERROR ***                           CP =      36.156   TIME= 02:25:31
+ The substep (MODE) number must be specified on the SET command for      
+ buckling (ANTYPE=1) or modal (ANTYPE=2) analysis.                       
+
+ *** WARNING ***                         CP =      37.312   TIME= 02:27:31
+ /FILNAME is not a recognized POST1 command, abbreviation, or macro.     
+  This command will be ignored.                                          
+
+ *** WARNING ***                         CP =      37.328   TIME= 02:27:31
+ Poisson's ratio NU set for material 1 deleted.                          
+
+ *** ERROR ***                           CP =      40.406   TIME= 02:27:33
+ The substep (MODE) number must be specified on the SET command for      
+ buckling (ANTYPE=1) or modal (ANTYPE=2) analysis.                       
+
+ *** WARNING ***                         CP =      41.344   TIME= 02:30:05
+ The working directory specified () is not a directory on machine        
+ DESKTOP-I8N5VRT.  The /CWD command is ignored on MPI process with rank  
+ 0.                                                                      
+
+ *** WARNING ***                         CP =      41.531   TIME= 02:30:30
+ /FILNAME is not a recognized POST1 command, abbreviation, or macro.     
+  This command will be ignored.                                          
+
+ *** WARNING ***                         CP =      41.547   TIME= 02:30:30
+ Poisson's ratio NU set for material 1 deleted.                          
+
+ *** WARNING ***                         CP =      42.172   TIME= 02:30:30
+ The working directory specified () is not a directory on machine        
+ DESKTOP-I8N5VRT.  The /CWD command is ignored on MPI process with rank  
+ 1.                                                                      
+
+ *** WARNING ***                         CP =      42.172   TIME= 02:30:30
+ The working directory specified () is not a directory on machine        
+ DESKTOP-I8N5VRT.  The /CWD command is ignored on MPI process with rank  
+ 2.                                                                      
+
+ *** WARNING ***                         CP =      42.234   TIME= 02:30:30
+ The working directory specified () is not a directory on machine        
+ DESKTOP-I8N5VRT.  The /CWD command is ignored on MPI process with rank  
+ 3.                                                                      
+
+ *** ERROR ***                           CP =      43.531   TIME= 02:30:31
+ The substep (MODE) number must be specified on the SET command for      
+ buckling (ANTYPE=1) or modal (ANTYPE=2) analysis.                       
