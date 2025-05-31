@@ -1,6 +1,10 @@
 Terminology:
 "the physics of “pulsing” a McKibben from the inside to drive an asymmetric mode."
 
+Small:
+1. update readme with better presentation of the tech stack
+2. also include images of meshed beam that has been simulated
+
 More and better parameterization – different materials, splines / shapes of the beam, parameterizing segments of a beam so that segments are different materials, etc.
 Possibly create script to determine reaction force of the simulated beam; i.e., how much force the vibration of the beam could generate, and use that as a parameter for the NN model down the line
 Create the dataset
@@ -8,7 +12,6 @@ Run the simulations
 Start testing neural network structures (tensorflow or pytorch) to generate beam parameters given a desired asymmetric mode
 
 Parameterize for soft materials — dragon skin or other such materials
-Why do they need to be soft? Why does the vibration material need to be soft?
 Make it out of soft materials to have the entire arm vibrate
 Make heterogeneous structure
 We are trying to get the arm to vibrate
@@ -16,7 +19,6 @@ Parameterize with splines + different materials, most important right now
 Simulation time analysis, optimize and multithread for all of this
 Discussed how it becomes a nonlinear optimization problem that we’re using Ansys for?
 Parameterize the output of asymmetric modes once generated, use that format as the input to the neural net for it to find the structure
-How do I define my own cost function? I don’t think I need to more 
 
 Idea:
 1. gui where I draw an asymmetric resonance mode, and the model outputs the parameters for it
@@ -56,18 +58,6 @@ Discussed how it becomes a nonlinear optimization problem that we’re using Ans
  
 Parameterize the output of asymmetric modes once generated, use that format as the input to the neural net for it to find the structure
  - I give it an input arm parameterization, it gives me output; flip it for the NN
-
-Qs:
-Do I only need to include asymmetric modes in the dataset? Depends on ML inputs…
-1. no, include both so the model has an idea; just test both
-
-Figure out why I can’t open ansys workbench
-How do I define my own cost function? I don’t think I need to more... nah just the ml
-
-ANSWERS:
-1. the input of the model is a paramterized beam of our design, parameterized according to my system
-Would be cool to make a drawing gui through which the model could be interacted with--for funzies,
-even make it text based??
 
 Possibly modeling the entire arm; make a geometry and model all of the forces going on in the arm itself...
 ALSO NEED TO VARY MATERIALS OF THE BEAM BEIND MODELED; BASICALLY, MODEL ALL PARAMETERS AND SEE HOW THE RESONANT FREQUENCY CHANGES

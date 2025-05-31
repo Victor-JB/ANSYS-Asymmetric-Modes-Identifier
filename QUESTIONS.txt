@@ -2,3 +2,16 @@
 1. how can I animate the asymmetric mode, frequency, just so I can see it?
 
 1. how can I quickly see the hz for the mode? as well as all of the measurements in paraview
+
+Qs:
+- How do I define my own cost function? I don’t think I need to more 
+Do I only need to include asymmetric modes in the dataset? Depends on ML inputs…
+1. no, include both so the model has an idea; just test both
+
+Figure out why I can’t open ansys workbench
+How do I define my own cost function? I don’t think I need to more... nah just the ml
+
+ANSWERS:
+1. the input of the model is a paramterized beam of our design, parameterized according to my system
+Would be cool to make a drawing gui through which the model could be interacted with--for funzies,
+even make it text based??
