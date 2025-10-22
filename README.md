@@ -1,7 +1,9 @@
 
 # ANSYS Asymmetric Modes Identifier
 
-A fully head‑less pyGeometry, pyPrimeMesh, and pyMAPDL pipeline that **generates large parametric fleets of soft‑robotic beam/tube geometries, meshes them, performs prestressed modal analyses, and exports asymmetric&nbsp;+ symmetric mode data** with the end goal being to create an ml model which takes in an asymmetric mode and outputs a structure and the required frequency.
+A fully head‑less pyGeometry, pyPrimeMesh, and pyMAPDL pipeline that **generates large parametric fleets of soft‑robotic beam/tube geometries, meshes them, performs prestressed modal analyses, and exports asymmetric&nbsp;+ symmetric mode data** with the end goal being to create an ml model which takes in an asymmetric mode and outputs a structure (material, configuration) and the required frequency.
+
+![Meshed Beam Example PNG](interesting_results_beam_meshed.png)
 
 ---
 
@@ -115,5 +117,3 @@ Bug reports, pull requests, and feature suggestions are welcome!
 Open an issue or ping **@Victor‑JB** on GitHub.
 
 ---
-
-*Last generated: 2025-05-30*
