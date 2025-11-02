@@ -12,13 +12,15 @@ from reaction_force_analysis import apply_modal_bc_and_get_reaction_force
 # -------------------
 # GLOBAL PARAMETERS
 # -------------------
-BEAM_ID = 1
+BEAM_ID = 2
 RUN_DIR = f"test_runs/beam_{BEAM_ID}"
 N_MODES = 3
 FIX_BOTH_ENDS = True  # If True, fix at x=0 and x=L; otherwise, only fix x=0
 
 # You can run a mesh convergence study if you're unsure how fine the mesh needs to be
-ELEMENT_SIZE = 0.009 # meters; Element size for meshing the beam, smaller means finer precision
+ELEMENT_SIZE = (
+    0.009  # meters; Element size for meshing the beam, smaller means finer precision
+)
 AMPLITUDE = 0.5  # meters; Assumed modal amplitude for force estimation
 
 # Geometry (meters)
@@ -29,9 +31,9 @@ HEIGHT = 0.07
 # Material: Steel
 MATERIAL = {
     "name": "steel",
-    "EX": 2e11,     # Young's modulus (Pa)
-    "PR": 0.3,      # Poisson's ratio
-    "DENS": 3000    # Density (kg/m^3)
+    "EX": 2e11,  # Young's modulus (Pa)
+    "PR": 0.3,  # Poisson's ratio
+    "DENS": 3000,  # Density (kg/m^3)
 }
 
 # -------------------
@@ -39,31 +41,45 @@ MATERIAL = {
 # -------------------
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--accurate-force", action="store_true",
-                        help="Use reaction force analysis instead of vector-based estimate.")
-    parser.add_argument("--save-cdb", help="True or false to save cdb file", default="False")
+    parser.add_argument(
+        "--accurate-force",
+        action="store_true",
+        help="Use reaction force analysis instead of vector-based estimate.",
+    )
+    parser.add_argument(
+        "--save-cdb", help="True or false to save cdb file", default="False"
+    )
     args = parser.parse_args()
 
     os.makedirs(RUN_DIR, exist_ok=True)
     print("Attempting to launch MAPDL...")
-    mapdl = launch_mapdl(run_location=f"{RUN_DIR}/output", override=True, loglevel="ERROR")
+    mapdl = launch_mapdl(
+        run_location=f"{RUN_DIR}/output", override=True, loglevel="ERROR"
+    )
     print("MAPDL launched successfully!")
-    
+
     try:
         if args.save_cdb == "True":
             mesh_dir = f"{RUN_DIR}/mode_shapes"
         else:
             mesh_dir = None
-        
-        create_beam(mapdl, length=LENGTH, width=WIDTH, height=HEIGHT,
-            element_size=ELEMENT_SIZE, material=MATERIAL, mesh_dir=mesh_dir,
-            fix_both_ends=FIX_BOTH_ENDS)
+
+        create_beam(
+            mapdl,
+            length=LENGTH,
+            width=WIDTH,
+            height=HEIGHT,
+            element_size=ELEMENT_SIZE,
+            material=MATERIAL,
+            mesh_dir=mesh_dir,
+            fix_both_ends=FIX_BOTH_ENDS,
+        )
 
         frequencies, vtk_paths = run_modal_analysis(
             mapdl,
             n_modes=N_MODES,
             output_dir=f"{RUN_DIR}/mode_shapes",
-            base_filename=f"beam_{BEAM_ID}"
+            base_filename=f"beam_{BEAM_ID}",
         )
 
         print("\n--- Simulation Results ---")
@@ -75,12 +91,14 @@ if __name__ == "__main__":
                     mode_shape_vtk=vtk_file,
                     base_model_dir=RUN_DIR,
                     amplitude=AMPLITUDE,
-                    axis="X"
+                    axis="X",
                 )
                 print(f"Mode {mode_idx}:")
                 print(f"  Frequency: {freq:.2f} Hz")
                 print(f"  Asymmetric: {is_asym}")
-                print(f"  Reaction Force: {force:.4f} N (fx={fx:.2f}, fy={fy:.2f}, fz={fz:.2f})")
+                print(
+                    f"  Reaction Force: {force:.4f} N (fx={fx:.2f}, fy={fy:.2f}, fz={fz:.2f})"
+                )
                 print(f"  VTK File: {vtk_file}\n")
             else:
                 force = estimate_force_from_vtk(vtk_file, axis="X", amplitude=AMPLITUDE)
@@ -94,6 +112,6 @@ if __name__ == "__main__":
     finally:
         # Clean up and exit MAPDL
         mapdl.finish()
-        mapdl.clear()   
+        mapdl.clear()
 
     mapdl.exit()
